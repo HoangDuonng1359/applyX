@@ -4,10 +4,21 @@ from app.services.chat_services import ChatService
 from app.services.chatbot_sevice import ChatService as ChatBot
 import uvicorn
 from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware
+
+
 load_dotenv()
 
 app = FastAPI()
 chat_service = ChatService()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 class MessageRequest(BaseModel):
     session_id: str
     message: str
