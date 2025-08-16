@@ -327,6 +327,23 @@ class ApplyXChatbot:
             
         if sessions_to_delete:
             logger.info(f"Đã xóa {len(sessions_to_delete)} sessions cũ")
+    def saveResultsBySession(self, session_id, result: str):
+        """
+            frontend gửi result về be lưu lại để truy vấn sau này
+        """
+        if session_id not in self.sessions:
+            raise ValueError(f"Session {session_id} không tồn tại")
+        # Lưu kết quả vào session, có thể lưu nhiều kết quả nếu muốn
+        self.sessions[session_id]["result"] = result
+        logger.info(f"Đã lưu kết quả cho session {session_id}")
+    def getResultsBySession(self, session_id):
+        """
+            gửi result đã lưu về cho frontend
+        """
+        if session_id not in self.sessions:
+            raise ValueError(f"Session {session_id} không tồn tại")
+        # Trả về kết quả đã lưu
+        return self.sessions[session_id].get("result", None)
 def create_applyx_bot(api_key: str = None) -> ApplyXChatbot:
     """
     Tạo instance ApplyX Chatbot

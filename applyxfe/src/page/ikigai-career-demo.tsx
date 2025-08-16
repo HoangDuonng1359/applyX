@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight, Users, Heart, DollarSign, Globe } from 'lucide-react';
+import { count } from 'console';
 
 interface Quiz {
     id: number;
@@ -140,6 +141,8 @@ const Ikigai = () => {
                 question: currentQ.question,
                 options: currentCount <= 8 ? currentQ.options : [],
             });
+        } finally {
+            if (questionCount >= 1) setIsLoading(false);
         }
     };
 
@@ -160,7 +163,13 @@ const Ikigai = () => {
         console.log("User answer:", finalAnswer);
         setAnswer("");
         setOtherAnswer("");
+
+        if (questionCount >= 1) setIsLoading(true);
+
         await generateQuestion(sessionId, finalAnswer);
+
+        if (questionCount >= 1) setIsLoading(false);
+
         if (questionCount >= totalQuestions) {
             setIsCompleted(true);
             return;
@@ -418,7 +427,7 @@ const Ikigai = () => {
                         </div>
                     </div>
 
-                    {quiz ? (
+                    {quiz && !isLoading ? (
                         <div className="bg-white rounded-2xl p-8 shadow-sm">
                             <h2 className="text-2xl font-semibold text-gray-800 mb-2">
                                 {quiz.question}
@@ -519,7 +528,7 @@ const Ikigai = () => {
                     ) : (
                         <div className="bg-white rounded-2xl p-12 shadow-sm text-center">
                             <div className="animate-spin w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"></div>
-                            <p className="text-gray-600">Đang tải câu hỏi...</p>
+                            <p className="text-gray-600">{questionCount == 20 ? "Chúng tôi đang phân tích..." : "Đang tải câu hỏi..."}</p>
                         </div>
                     )}
                 </div>

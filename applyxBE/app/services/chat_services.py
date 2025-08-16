@@ -21,4 +21,22 @@ class ChatService:
 
     def delete_session(self, session_id: str):
         return self.bot.delete_session(session_id)
+    def save_result(self, session_id: str, result: dict):
+        """
+            Lưu kết quả vào session
+        """
+        if session_id not in self.bot.sessions:
+            raise ValueError(f"Session {session_id} không tồn tại")
+        
+        # Lưu kết quả vào session
+        self.bot.save_result(session_id, result)
+    def get_results_by_session(self, session_id: str):
+        """
+            Lấy kết quả đã lưu từ session
+        """
+        if session_id not in self.bot.sessions:
+            raise ValueError(f"Session {session_id} không tồn tại")
+        
+        # Trả về kết quả đã lưu
+        return self.bot.getResultsBySession(session_id)
 
