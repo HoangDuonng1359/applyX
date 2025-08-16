@@ -65,7 +65,7 @@ class ApplyXChatbot:
                     "Bây giờ bạn hãy tạo ra một cuộc hội thoại kiểu như một bài khảo sát định hướng nghề nghiệp dựa trên nguyên lý Ikigai. "
                     "Bạn sẽ hỏi lần lượt 20 câu hỏi, bao gồm 8 câu hỏi cơ bản sau đây và 12 câu hỏi bổ sung dựa trên câu trả lời của tôi để tạo ra những câu hỏi sâu hơn, cá nhân hóa hơn.\n\n"
                     
-                    "**8 câu hỏi cơ bản - PHẢI HỎI CHÍNH XÁC THEO CẤU TRÚC NÀY:**\n\n"
+                    "**20 câu hỏi - PHẢI HỎI CHÍNH XÁC THEO CẤU TRÚC NÀY:**\n\n"
                     
                     "**Câu 1:** Hoạt động nào khiến bạn thấy hứng thú và muốn làm hàng ngày?\n"
                     "a) Sáng tạo nghệ thuật (vẽ, viết, thiết kế)\n"
@@ -124,14 +124,14 @@ class ApplyXChatbot:
                     "e) Khác\n\n"
                     
                     "**Hướng dẫn thực hiện:**\n"
-                    "- QUAN TRỌNG: Phải hỏi chính xác theo đúng cấu trúc trên, không được thay đổi nội dung câu hỏi hoặc các lựa chọn a, b, c, d, e\n"
+                    "- QUAN TRỌNG: Phải hỏi chính xác theo đúng cấu trúc trên, không được thay đổi nội dung câu hỏi hoặc các lựa chọn a, b, c, d, e với các câu hỏi cơ bản\n"
                     "- Hỏi từng câu một, đợi tôi trả lời trước khi chuyển sang câu tiếp theo\n"
                     "- Sau 8 câu cơ bản, tạo thêm 12 câu hỏi cá nhân hóa dựa trên câu trả lời của tôi\n"
+                    "- Các câu hỏi bạn tạo ra hãy thêm chữ Option trước câu hỏi"
                     "- Các câu hỏi bổ sung phải bám sát vào người trả lời để hiểu rõ hơn về đam mê, khả năng, giá trị và nhu cầu thị trường của họ\n"
                     "- Kết thúc bằng danh sách nghề nghiệp phù hợp với giải thích chi tiết dựa trên 4 yếu tố Ikigai\n\n"
                     "- danh sách nghề nghiệp có output tuân thủ output sau:"
-                    "Kết quả: 1, Nghề.... \n 2, Nghề...." 
-                    
+                    "Kết quả: 1, Nghề.... Điểm trung bình: 95 , Điểm thế giới cần: 90, Điểm được trả lương: 60, Điểm yêu thích: 90, Điểm bạn giỏi: 80 \n 2, Nghề....; các đầu điểm bạn hãy tự tính, và tính điểm trung bình" 
                     "Khi tôi nói \"Bắt đầu khảo sát ikigai\" thì bạn hãy bắt đầu hỏi câu hỏi đầu tiên theo đúng cấu trúc đã cho."
                 ]
             },
@@ -140,7 +140,7 @@ class ApplyXChatbot:
                 "parts": [
                     "Đã hiểu rõ! Tôi đã ghi nhận đầy đủ yêu cầu của bạn về cuộc khảo sát Ikigai:\n\n"
                     "✅ Tôi sẽ thực hiện chính xác 20 câu hỏi tổng cộng\n"
-                    "✅ 8 câu hỏi đầu sẽ được hỏi theo ĐÚNG CẤU TRÚC bạn đã cung cấp, không thay đổi gì\n"
+                    "✅ Tất cả các câu hỏi sẽ được hỏi theo ĐÚNG CẤU TRÚC bạn đã cung cấp, không thay đổi gì\n"
                     "✅ 12 câu hỏi tiếp theo sẽ được cá nhân hóa dựa trên câu trả lời của bạn\n"
                     "✅ Hỏi từng câu một và đợi câu trả lời\n"
                     "✅ Kết thúc bằng danh sách nghề nghiệp phù hợp với giải thích chi tiết theo 4 yếu tố Ikigai\n\n"
