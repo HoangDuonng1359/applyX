@@ -20,10 +20,9 @@ class ApplyXChatbot:
         """
         try:
             # Cấu hình API key
-            if api_key:
-                genai.configure(api_key=api_key)
-            else:
-                genai.configure(api_key=os.getenv("GEMINI_API_KEY", ""))
+            api_key = os.getenv("GEMINI_API_KEY", "")
+            genai.configure(api_key=api_key)
+            
             
             # Khởi tạo model
             self.model = genai.GenerativeModel(model)
@@ -31,7 +30,7 @@ class ApplyXChatbot:
             # Dictionary lưu trữ các chat sessions
             self.sessions = {}
             
-            logger.info("ApplyX Chatbot đã được khởi tạo thành công")
+            logger.info("ApplyX Chatbot đã được khởi tạo thành công sử dụng api key" + api_key)
             
         except Exception as e:
             logger.error(f"Lỗi khởi tạo ApplyX Chatbot: {e}")

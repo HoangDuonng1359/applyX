@@ -130,5 +130,27 @@ async def delete_session(session_id: str):
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
+@app.post("/chatbot/saveResult/{session_id}/{result}", tags=["Save Results"])
+async def save_result_by_session(session_id: str, result: str):
+    """
+        Gọi save_result để lưu kết quả dạng chuỗi vào session.
+    """
+    try:
+        chat_service.save_result(session_id, result)
+        return {"message": f"Kết quả đã được lưu cho session {session_id}."}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.get("/chatbot/getResult/{session_id}", tags=["get Results"])
+async def get_result_by_session(session_id: str):
+    """
+        Lấy kết quả đã lưu từ session.
+    """
+    try:
+        result = chat_service.get_results_by_session(session_id)
+        return {"session_id": session_id, "result": result}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
 if __name__ == "__main__":
     uvicorn.run("app.main:app", host="127.0.0.1", port=8000, reload=True)
