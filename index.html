@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ikigai Career Counselor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo">
+          <div class="logo-icon">🎯</div>
+          <div class="logo-text">ApplyX</div>
+        </div>
+        <div class="nav-item active" onclick="showWelcome()">
+          🏠 Định hướng bản thân
+        </div>
+        <div class="nav-item" onclick="showResults()">📊 Kết quả phân tích</div>
+        <div class="nav-item">💬 Chatbot hỗ trợ</div>
+        <div class="nav-item">📄 Hồ sơ & Tài liệu</div>
+      </div>
+
+      <div class="main-content">
+        <!-- Welcome Screen -->
+        <div id="welcome" class="welcome-screen">
+          <div class="ikigai-icon">⚡</div>
+          <h1>Tìm IKIGAI của bạn</h1>
+          <p class="subtitle">
+            Ikigai giống như chiếc la bàn dẫn đường, giúp bạn biết mình nên
+            sống, làm việc và cống hiến vì điều gì.
+          </p>
+
+          <div class="ikigai-explanation">
+            <p>
+              <strong>💡Ikigai là gì?</strong> Đây là một khái niệm của Nhật Bản
+              có nghĩa là 'lý do để tồn tại'. Ikigai của bạn nằm ở giao điểm
+              giữa những gì bạn yêu thích, những gì bạn giỏi, những gì bạn có
+              thể được trả công và những gì thế giới cần
+            </p>
+          </div>
+
+          <button class="start-button" onclick="startQuestionnaire()">
+            Bắt đầu hành trình →
+          </button>
+          <p style="margin-top: 20px; color: #64748b; font-size: 14px">
+            Mất khoảng 8–12 phút để hoàn thành.
+          </p>
+        </div>
+
+        <!-- Questionnaire -->
+        <div id="questionnaire" class="questionnaire">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+          </div>
+
+          <div class="question-card" id="questionCard">
+            <div class="question-title" id="questionTitle"></div>
+            <div class="question-subtitle" id="questionSubtitle"></div>
+            <div id="questionOptions"></div>
+          </div>
+
+          <div class="navigation-buttons">
+            <button
+              class="nav-button secondary"
+              id="prevButton"
+              onclick="previousQuestion()"
+            >
+              ← Previous
+            </button>
+            <button
+              class="nav-button primary"
+              id="nextButton"
+              onclick="nextQuestion()"
+            >
+              Next →
+            </button>
+          </div>
+        </div>
+
+        <!-- Congratulations -->
+        <div id="congratulations" class="congratulations">
+          <div class="celebration-icon">🎉</div>
+          <h1>Congratulations!</h1>
+          <p class="subtitle">Làm xong bài test rồi</p>
+          <button class="continue-button" onclick="showResults()">
+            Continue
+          </button>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="results">
+          <h1>Ikigai của bạn được hé lộ</h1>
+          <p class="subtitle">
+            Dựa trên dữ liệu và câu trả lời của bạn, AI đã xây dựng biểu đồ
+            Ikigai cá nhân hóa dưới đây.
+          </p>
+
+          <div class="ikigai-diagram">
+            <div class="ikigai-circle love-circle">
+              <div>LOVE<br /><span id="loveContent">What you love</span></div>
+            </div>
+            <div class="ikigai-circle good-circle">
+              <div>
+                GOOD AT<br /><span id="goodContent">What you're good at</span>
+              </div>
+            </div>
+            <div class="ikigai-circle paid-circle">
+              <div>
+                PAID FOR<br /><span id="paidContent"
+                  >What you can be paid for</span
+                >
+              </div>
+            </div>
+            <div class="ikigai-circle need-circle">
+              <div>
+                WORLD NEEDS<br /><span id="needContent"
+                  >What the world needs</span
+                >
+              </div>
+            </div>
+            <div class="ikigai-center">IKIGAI</div>
+          </div>
+
+          <h2 style="margin-top: 40px; margin-bottom: 20px; color: #1e293b">
+            Top 3 Career Recommendations
+          </h2>
+          <div class="career-recommendations" id="careerRecommendations"></div>
+
+          <div style="text-align: center; margin-top: 40px">
+            <button class="start-button" onclick="retakeTest()">
+              Take Test Again
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Question data
+      const questions = [
+        {
+          title: "At a social event, you often:",
+          subtitle: "Choose the option that best describes you.",
+          tip: "Tip: pick what you do most often.",
+          category: "love",
+          options: [
+            {
+              text: "Share interesting articles or ideas you've discovered",
+              value: "sharing_knowledge",
+            },
+            {
+              text: "Organize activities or games for everyone",
+              value: "organizing_events",
+            },
+            {
+              text: "Tell stories that inspire or entertain",
+              value: "storytelling",
+            },
+            {
+              text: "Make sure everyone feels included and comfortable",
+              value: "caring_others",
+            },
+          ],
+        },
+        {
+          title: "When facing a complex problem, your instinct is to:",
+          subtitle: "Select your natural approach to problem-solving.",
+          category: "good",
+          options: [
+            {
+              text: "Break it down into smaller, manageable pieces",
+              value: "analytical_thinking",
+            },
+            {
+              text: "Brainstorm creative and unconventional solutions",
+              value: "creative_thinking",
+            },
+            {
+              text: "Research what others have done in similar situations",
+              value: "research_skills",
+            },
+            {
+              text: "Bring together different people to collaborate",
+              value: "collaboration",
+            },
+          ],
+        },
+        {
+          title: "What type of recognition motivates you most?",
+          subtitle:
+            "Think about what truly drives your sense of accomplishment.",
+          category: "love",
+          options: [
+            {
+              text: "Being acknowledged as an expert in your field",
+              value: "expertise_recognition",
+            },
+            {
+              text: "Seeing the positive impact of your work on others",
+              value: "impact_recognition",
+            },
+            {
+              text: "Having creative freedom and autonomy",
+              value: "creative_freedom",
+            },
+            {
+              text: "Building something that lasts and grows over time",
+              value: "legacy_building",
+            },
+          ],
+        },
+        {
+          title: "In your ideal work environment, you would:",
+          subtitle: "Choose the setting that energizes you most.",
+          category: "paid",
+          options: [
+            {
+              text: "Work with cutting-edge technology and tools",
+              value: "technology_focus",
+            },
+            {
+              text: "Collaborate with diverse, talented teams",
+              value: "team_collaboration",
+            },
+            {
+              text: "Have direct contact with clients or customers",
+              value: "client_interaction",
+            },
+            {
+              text: "Work independently on meaningful projects",
+              value: "independent_work",
+            },
+          ],
+        },
+        {
+          title: "What global challenge concerns you most?",
+          subtitle:
+            "Select the issue you feel most passionate about addressing.",
+          category: "need",
+          options: [
+            {
+              text: "Climate change and environmental sustainability",
+              value: "environmental_issues",
+            },
+            {
+              text: "Education inequality and access to learning",
+              value: "education_equality",
+            },
+            {
+              text: "Healthcare accessibility and mental wellness",
+              value: "healthcare_access",
+            },
+            {
+              text: "Economic inequality and poverty",
+              value: "economic_inequality",
+            },
+          ],
+        },
+        {
+          title: "When learning something new, you prefer to:",
+          subtitle: "Think about your natural learning style.",
+          category: "good",
+          options: [
+            {
+              text: "Read comprehensive guides and documentation",
+              value: "reading_learning",
+            },
+            {
+              text: "Watch videos and visual demonstrations",
+              value: "visual_learning",
+            },
+            {
+              text: "Learn by doing and experimenting hands-on",
+              value: "hands_on_learning",
+            },
+            {
+              text: "Discuss and learn from others' experiences",
+              value: "social_learning",
+            },
+          ],
+        },
+        {
+          title: "Your friends would describe you as someone who:",
+          subtitle:
+            "Choose the description that resonates most with your personality.",
+          category: "love",
+          options: [
+            {
+              text: "Always has innovative ideas and solutions",
+              value: "innovative_thinker",
+            },
+            {
+              text: "Brings people together and builds connections",
+              value: "relationship_builder",
+            },
+            {
+              text: "Pays attention to details others might miss",
+              value: "detail_oriented",
+            },
+            {
+              text: "Stays calm and focused under pressure",
+              value: "pressure_handler",
+            },
+          ],
+        },
+        {
+          title: "What would make you feel most fulfilled in a career?",
+          subtitle: "Consider what success means to you personally.",
+          category: "paid",
+          options: [
+            {
+              text: "Earning enough to support causes you believe in",
+              value: "cause_supporter",
+            },
+            {
+              text: "Having financial security and stability",
+              value: "financial_security",
+            },
+            {
+              text: "Building wealth through entrepreneurship",
+              value: "entrepreneurial_wealth",
+            },
+            {
+              text: "Being fairly compensated for specialized expertise",
+              value: "expertise_compensation",
+            },
+          ],
+        },
+        {
+          title: "If you had unlimited resources, you would spend your time:",
+          subtitle: "Imagine you have no financial constraints.",
+          category: "need",
+          options: [
+            {
+              text: "Developing solutions to help underserved communities",
+              value: "community_development",
+            },
+            {
+              text: "Creating art, content, or experiences that inspire others",
+              value: "creative_inspiration",
+            },
+            {
+              text: "Advancing scientific research or technological innovation",
+              value: "scientific_advancement",
+            },
+            {
+              text: "Teaching and mentoring the next generation",
+              value: "education_mentoring",
+            },
+          ],
+        },
+        {
+          title: "What energizes you most about working with others?",
+          subtitle: "Think about your favorite collaborative experiences.",
+          category: "good",
+          options: [
+            {
+              text: "Helping others develop their skills and potential",
+              value: "mentoring_others",
+            },
+            {
+              text: "Leading projects and guiding teams to success",
+              value: "leadership_skills",
+            },
+            {
+              text: "Contributing specialized knowledge to group efforts",
+              value: "knowledge_contribution",
+            },
+            {
+              text: "Facilitating communication and resolving conflicts",
+              value: "communication_facilitation",
+            },
+          ],
+        },
+      ];
+
+      let currentQuestion = 0;
+      let answers = {};
+      let ikigaiProfile = {
+        love: [],
+        good: [],
+        paid: [],
+        need: [],
+      };
+
+      function showWelcome() {
+        document.getElementById("welcome").style.display = "block";
+        document.getElementById("questionnaire").style.display = "none";
+        document.getElementById("congratulations").style.display = "none";
+        document.getElementById("results").style.display = "none";
+      }
+
+      function startQuestionnaire() {
+        document.getElementById("welcome").style.display = "none";
+        document.getElementById("questionnaire").style.display = "block";
+        currentQuestion = 0;
+        answers = {};
+        displayQuestion();
+      }
+
+      function displayQuestion() {
+        const question = questions[currentQuestion];
+        document.getElementById("questionTitle").textContent = question.title;
+        document.getElementById("questionSubtitle").textContent =
+          question.subtitle;
+
+        const optionsContainer = document.getElementById("questionOptions");
+        optionsContainer.innerHTML = "";
+
+        question.options.forEach((option, index) => {
+          const optionElement = document.createElement("div");
+          optionElement.className = "option";
+          optionElement.textContent = option.text;
+          optionElement.onclick = () =>
+            selectOption(index, option.value, question.category);
+          optionsContainer.appendChild(optionElement);
+        });
+
+        // Update progress
+        const progress = (currentQuestion / questions.length) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+
+        // Update navigation buttons
+        document.getElementById("prevButton").style.display =
+          currentQuestion === 0 ? "none" : "block";
+        document.getElementById("nextButton").textContent =
+          currentQuestion === questions.length - 1 ? "Complete" : "Next →";
+      }
+
+      function selectOption(index, value, category) {
+        // Remove previous selection
+        document
+          .querySelectorAll(".option")
+          .forEach((opt) => opt.classList.remove("selected"));
+
+        // Add selection to clicked option
+        document.querySelectorAll(".option")[index].classList.add("selected");
+
+        // Store answer
+        answers[currentQuestion] = { value, category };
+      }
+
+      function nextQuestion() {
+        if (!answers[currentQuestion]) {
+          alert("Please select an option before continuing.");
+          return;
+        }
+
+        if (currentQuestion < questions.length - 1) {
+          currentQuestion++;
+          displayQuestion();
+        } else {
+          completeQuestionnaire();
+        }
+      }
+
+      function previousQuestion() {
+        if (currentQuestion > 0) {
+          currentQuestion--;
+          displayQuestion();
+        }
+      }
+
+      function completeQuestionnaire() {
+        // Process answers to build Ikigai profile
+        processAnswers();
+
+        // Show congratulations
+        document.getElementById("questionnaire").style.display = "none";
+        document.getElementById("congratulations").style.display = "block";
+      }
+
+      function processAnswers() {
+        // Clear previous profile
+        ikigaiProfile = { love: [], good: [], paid: [], need: [] };
+
+        // Process each answer
+        Object.values(answers).forEach((answer) => {
+          ikigaiProfile[answer.category].push(answer.value);
+        });
+
+        // Generate content for each circle
+        generateIkigaiContent();
+      }
+
+      function generateIkigaiContent() {
+        const contentMap = {
+          love: {
+            sharing_knowledge: "Sharing Knowledge",
+            storytelling: "Storytelling & Entertainment",
+            caring_others: "Caring for Others",
+            expertise_recognition: "Being an Expert",
+            impact_recognition: "Making Impact",
+            creative_freedom: "Creative Expression",
+            innovative_thinker: "Innovation",
+            relationship_builder: "Building Relationships",
+          },
+          good: {
+            analytical_thinking: "Analytical Thinking",
+            creative_thinking: "Creative Problem Solving",
+            research_skills: "Research & Analysis",
+            collaboration: "Team Collaboration",
+            reading_learning: "Learning & Development",
+            hands_on_learning: "Practical Skills",
+            detail_oriented: "Attention to Detail",
+            mentoring_others: "Mentoring",
+            leadership_skills: "Leadership",
+            communication_facilitation: "Communication",
+          },
+          paid: {
+            technology_focus: "Technology",
+            team_collaboration: "Teamwork",
+            client_interaction: "Client Relations",
+            independent_work: "Independent Work",
+            cause_supporter: "Mission-Driven Work",
+            financial_security: "Stable Income",
+            entrepreneurial_wealth: "Entrepreneurship",
+            expertise_compensation: "Specialized Expertise",
+          },
+          need: {
+            environmental_issues: "Environmental Solutions",
+            education_equality: "Education Access",
+            healthcare_access: "Healthcare & Wellness",
+            economic_inequality: "Economic Justice",
+            community_development: "Community Support",
+            creative_inspiration: "Creative Inspiration",
+            scientific_advancement: "Scientific Progress",
+            education_mentoring: "Teaching & Mentoring",
+          },
+        };
+
+        // Update Ikigai diagram content
+        ["love", "good", "paid", "need"].forEach((category) => {
+          const topItems = ikigaiProfile[category]
+            .map((item) => contentMap[category][item])
+            .filter((item) => item)
+            .slice(0, 3);
+
+          const content =
+            topItems.length > 0 ? topItems.join(", ") : "Various interests";
+          document.getElementById(category + "Content").textContent = content;
+        });
+      }
+
+      function showResults() {
+        document.getElementById("welcome").style.display = "none";
+        document.getElementById("questionnaire").style.display = "none";
+        document.getElementById("congratulations").style.display = "none";
+        document.getElementById("results").style.display = "block";
+
+        generateCareerRecommendations();
+      }
+
+      function generateCareerRecommendations() {
+        const careers = [
+          {
+            title: "UX/UI Designer",
+            match: "92% Match",
+            description:
+              "Create intuitive and beautiful user experiences that solve real problems while expressing creativity.",
+            skills: [
+              "Design Thinking",
+              "User Research",
+              "Prototyping",
+              "Visual Communication",
+            ],
+          },
+          {
+            title: "Data Scientist",
+            match: "87% Match",
+            description:
+              "Use analytical skills to extract insights from data and drive decision-making in organizations.",
+            skills: [
+              "Statistical Analysis",
+              "Programming",
+              "Machine Learning",
+              "Data Visualization",
+            ],
+          },
+          {
+            title: "Product Manager",
+            match: "84% Match",
+            description:
+              "Bridge technical and business teams to build products that users love and companies need.",
+            skills: [
+              "Strategic Thinking",
+              "Project Management",
+              "User Empathy",
+              "Cross-functional Leadership",
+            ],
+          },
+        ];
+
+        const container = document.getElementById("careerRecommendations");
+        container.innerHTML = "";
+
+        careers.forEach((career) => {
+          const careerCard = document.createElement("div");
+          careerCard.className = "career-card";
+          careerCard.innerHTML = `
+                    <div class="career-title">${career.title}</div>
+                    <div class="career-match">${career.match}</div>
+                    <div class="career-description">${career.description}</div>
+                    <div class="career-skills">
+                        ${career.skills
+                          .map(
+                            (skill) => `<span class="skill-tag">${skill}</span>`
+                          )
+                          .join("")}
+                    </div>
+                `;
+          container.appendChild(careerCard);
+        });
+      }
+
+      function retakeTest() {
+        currentQuestion = 0;
+        answers = {};
+        ikigaiProfile = { love: [], good: [], paid: [], need: [] };
+        showWelcome();
+      }
+
+      // Initialize the application
+      showWelcome();
+    </script>
+  </body>
+</html>
