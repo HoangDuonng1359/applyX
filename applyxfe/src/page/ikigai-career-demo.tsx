@@ -18,6 +18,7 @@ const Ikigai = () => {
     const [questionCount, setQuestionCount] = useState<number>(0);
     const totalQuestions = 20;
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [data, setData] = useState(null);
 
     const getsessionID = async () => {
         try {
@@ -42,6 +43,28 @@ const Ikigai = () => {
         }
     };
 
+    const saveResult = async (results: string) => {
+        if (!sessionId) {
+            console.log("Chưa có sessionId!");
+            return;
+        }
+        try {
+            const res = await fetch(`http://127.0.0.1:8000/chatbot/saveResult/${sessionId}/${encodeURIComponent(results)}`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" }
+            });
+            const data = await res.json();
+            if (res.ok) {
+                console.log("Lưu kết quả thành công!");
+            } else {
+                console.log("Lỗi khi lưu kết quả: " + data.detail);
+            }
+        } catch (error) {
+            console.log("Lỗi kết nối khi lưu kết quả!");
+            console.error(error);
+        }
+    }
+
     const generateQuestion = async (sessionId: string, mess: string) => {
         try {
             const res = await fetch("http://127.0.0.1:8000/chat/send", {
@@ -55,7 +78,7 @@ const Ikigai = () => {
 
             const data = await res.json();
             console.log("Raw data:", data);
-
+            setData(data);
             let question = "";
             let options: string[] = [];
 
@@ -328,6 +351,9 @@ const Ikigai = () => {
 
                             <button
                                 onClick={() => {
+                                    if (data && (data as any).response) {
+                                        saveResult((data as any).response);
+                                    }
                                     setIsCompleted(false);
                                     setIsStarted(false);
                                     setQuestionCount(0);
