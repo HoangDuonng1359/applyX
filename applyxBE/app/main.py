@@ -11,7 +11,6 @@ load_dotenv()
 
 app = FastAPI()
 chat_service = ChatService()
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  
