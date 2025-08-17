@@ -1,42 +1,42 @@
-session_id: session_1755406257
+session_id: session_1755411972
 result: ```json
 {
   "careers": [
     {
       "rank": 1,
-      "title": "Chuyên viên Thiết kế UI/UX (trong lĩnh vực Giáo dục)",
-      "subtitle": "Kết hợp khả năng sáng tạo nghệ thuật và phân tích để tối ưu trải nghiệm người dùng trong các ứng dụng giáo dục.",
+      "title": "Kỹ sư Phần mềm (Chuyên sâu Hiệu năng & Tối ưu hóa)",
+      "subtitle": "Xây dựng, tối ưu hóa hệ thống và khắc phục lỗi để đảm bảo phần mềm hoạt động hiệu quả.",
       "averageScore": 90,
-      "worldNeedsScore": 90,
-      "paidScore": 85,
-      "loveScore": 95,
-      "goodAtScore": 90,
+      "worldNeedsScore": 85,
+      "paidScore": 90,
+      "loveScore": 90,
+      "goodAtScore": 95,
       "color": "#FFB800",
-      "explanation": "Bạn thể hiện niềm đam mê mạnh mẽ với 'sáng tạo nghệ thuật (vẽ, viết, thiết kế)' và mong muốn trực tiếp 'tối ưu trải nghiệm người dùng' đặc biệt là trong 'ứng dụng giáo dục'. Đây là những yếu tố cốt lõi của một UI/UX Designer. Bạn rất giỏi trong 'phân tích và xử lý dữ liệu', 'phân tích nguyên nhân cặn kẽ' và 'phân tích nhu cầu' thông qua khảo sát, phỏng vấn, những kỹ năng cực kỳ quan trọng để hiểu người dùng. Khả năng về 'thiết kế đồ họa' cũng là một điểm cộng lớn. Nhu cầu về các sản phẩm công nghệ hữu ích, đặc biệt trong giáo dục và trải nghiệm người dùng tốt là rất lớn, đồng thời đây cũng là một lĩnh vực có mức thu nhập cạnh tranh trong ngành CNTT và AI."
+      "explanation": "Với niềm đam mê giải quyết vấn đề logic, nghiên cứu chuyên sâu để 'fix bug' và cải thiện hiệu năng, bạn rất phù hợp với vai trò này. Khả năng phân tích dữ liệu, xử lý vấn đề cặn kẽ và lập trình tốt là nền tảng vững chắc. Xã hội luôn cần những kỹ sư tài năng để xây dựng và duy trì các hệ thống công nghệ phức tạp, đảm bảo sản phẩm hoạt động trơn tru. Đây là một trong những lĩnh vực có mức lương rất cạnh tranh, đáp ứng mong muốn về một công việc có thu nhập cao và môi trường làm việc chuyên nghiệp, tiềm năng đạt được sự 'việc nhẹ lương cao' tùy theo năng lực và lựa chọn công ty."
     },
     {
       "rank": 2,
-      "title": "Quản lý Sản phẩm (Product Manager) Công nghệ Giáo dục",
-      "subtitle": "Dẫn dắt quá trình phát triển sản phẩm công nghệ giáo dục, từ ý tưởng đến triển khai, đảm bảo đáp ứng nhu cầu thị trường.",
-      "averageScore": 91,
-      "worldNeedsScore": 95,
-      "paidScore": 90,
-      "loveScore": 88,
-      "goodAtScore": 92,
-      "color": "#007bff",
-      "explanation": "Với khả năng 'nghiên cứu một lĩnh vực chuyên sâu' và 'phân tích nguyên nhân cặn kẽ', bạn có tố chất của một người quản lý sản phẩm. Bạn muốn 'tạo ra sản phẩm hữu ích' và 'ứng dụng giáo dục', đồng thời quan tâm đến 'công nghệ và đổi mới'. Các kỹ năng 'phân tích và xử lý dữ liệu', 'phân tích nhu cầu' (khảo sát, phỏng vấn) là nền tảng vững chắc để xác định tầm nhìn và lộ trình sản phẩm. Vai trò này đòi hỏi sự hiểu biết sâu sắc về thị trường và người dùng để đảm bảo sản phẩm đáp ứng đúng nhu cầu xã hội, điều mà bạn thể hiện rõ mong muốn đóng góp, và là một vị trí có mức thu nhập cao trong ngành công nghệ thông tin."
+      "title": "Kỹ sư DevOps / Site Reliability Engineer (SRE)",
+      "subtitle": "Đảm bảo độ tin cậy, khả năng mở rộng và hiệu quả vận hành của các hệ thống phần mềm.",
+      "averageScore": 88,
+      "worldNeedsScore": 85,
+      "paidScore": 88,
+      "loveScore": 90,
+      "goodAtScore": 90,
+      "color": "#2196F3",
+      "explanation": "Bạn có niềm yêu thích mạnh mẽ với việc giải quyết các vấn đề hệ thống, đặc biệt là 'fix bug' và tìm cách cải thiện hiệu năng, tính khả dụng. Với kỹ năng phân tích sâu sắc các nguyên nhân gây lỗi và khả năng lập trình để tự động hóa quy trình, bạn sẽ xuất sắc trong vai trò này. Thế giới cần những chuyên gia đảm bảo các dịch vụ trực tuyến hoạt động liên tục và ổn định. Về mặt tài chính, đây là một trong những vai trò được trả lương cao nhất trong ngành IT do tính chất quan trọng và phức tạp của công việc, góp phần hiện thực hóa mong muốn về mức lương tốt."
     },
     {
       "rank": 3,
-      "title": "Kỹ sư Phần mềm Front-end (Phát triển Ứng dụng Giáo dục)",
-      "subtitle": "Chuyển hóa thiết kế và trải nghiệm người dùng thành các ứng dụng giáo dục hoạt động hiệu quả.",
-      "averageScore": 91,
-      "worldNeedsScore": 95,
-      "paidScore": 95,
-      "loveScore": 85,
-      "goodAtScore": 90,
-      "color": "#28a745",
-      "explanation": "Bạn đã lựa chọn 'lập trình và công nghệ' là kỹ năng muốn phát triển và quan tâm đến 'phát triển phần mềm', đặc biệt là 'tạo ra những ứng dụng hữu ích' trong lĩnh vực 'giáo dục'. Khả năng 'tối ưu trải nghiệm người dùng' và có hứng thú với 'thiết kế đồ họa' sẽ giúp bạn trở thành một kỹ sư Front-end xuất sắc, người trực tiếp xây dựng giao diện và trải nghiệm người dùng. Nhu cầu về lập trình viên trong 'công nghệ thông tin và AI' là cực kỳ cao, đảm bảo cơ hội việc làm và thu nhập rất tốt. Đây là con đường giúp bạn biến ý tưởng sáng tạo và khả năng phân tích thành sản phẩm thực tế."
+      "title": "Chuyên gia Phát triển & Đào tạo Kỹ thuật (Technical Trainer/Mentor)",
+      "subtitle": "Sử dụng kiến thức chuyên sâu và kỹ năng phân tích để chia sẻ, nâng cao trình độ cộng đồng công nghệ.",
+      "averageScore": 83,
+      "worldNeedsScore": 90,
+      "paidScore": 75,
+      "loveScore": 80,
+      "goodAtScore": 85,
+      "color": "#4CAF50",
+      "explanation": "Bạn không chỉ yêu thích việc nghiên cứu sâu và giải quyết vấn đề kỹ thuật mà còn có mong muốn giúp đỡ người khác phát triển kỹ năng, đặc biệt trong lĩnh vực giáo dục và tri thức. Khả năng phân tích và xử lý dữ liệu tốt sẽ giúp bạn tổng hợp và truyền đạt thông tin phức tạp một cách rõ ràng. Xã hội rất cần những người có năng lực truyền đạt kiến thức công nghệ hiệu quả để nâng cao mặt bằng chung. Vai trò này có thể mang lại thu nhập tốt thông qua các khóa học, tư vấn, hoặc vị trí 'Developer Advocate' trong các công ty lớn, nơi bạn có thể vừa làm việc vừa chia sẻ kiến thức một cách chuyên nghiệp."
     }
   ]
 }
