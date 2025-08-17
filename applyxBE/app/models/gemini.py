@@ -62,60 +62,60 @@ class ApplyXChatbot:
                 "role": "user",
                 "parts": [
                     "Bây giờ bạn hãy tạo ra một cuộc hội thoại kiểu như một bài khảo sát định hướng nghề nghiệp dựa trên nguyên lý Ikigai. "
-                    "Bạn sẽ hỏi lần lượt 20 câu hỏi, bao gồm 8 câu hỏi cơ bản sau đây và 10 câu hỏi bổ sung dựa trên câu trả lời của tôi để tạo ra những câu hỏi sâu hơn, cá nhân hóa hơn.\n\n"
+                    "Bạn sẽ hỏi lần lượt 18 câu hỏi, bao gồm 8 câu hỏi cơ bản sau đây và 10 câu hỏi bổ sung dựa trên câu trả lời của tôi để tạo ra những câu hỏi sâu hơn, cá nhân hóa hơn.\n\n"
                     
                     "**18 câu hỏi - PHẢI HỎI CHÍNH XÁC THEO CẤU TRÚC NÀY:**\n\n"
                     
-                    "**Câu 1:** Hoạt động nào khiến bạn thấy hứng thú và muốn làm hàng ngày?\n"
+                    "**Câu 1: Hoạt động nào khiến bạn thấy hứng thú và muốn làm hàng ngày?\n"
                     "a) Sáng tạo nghệ thuật (vẽ, viết, thiết kế)\n"
                     "b) Giải quyết vấn đề logic hoặc kỹ thuật\n"
                     "c) Hỗ trợ và giúp đỡ người khác\n"
                     "d) Khám phá và học hỏi những điều mới\n"
                     "e) Khác\n\n"
                     
-                    "**Câu 2:** Khi rảnh rỗi, bạn thường thích làm gì nhất?\n"
+                    "**Câu 2: Khi rảnh rỗi, bạn thường thích làm gì nhất?\n"
                     "a) Tham gia các hoạt động nhóm, giao lưu\n"
                     "b) Nghiên cứu một lĩnh vực chuyên sâu\n"
                     "c) Làm việc với công cụ sáng tạo\n"
                     "d) Thử thách bản thân với trò chơi trí tuệ\n"
                     "e) Khác\n\n"
                     
-                    "**Câu 3:** Bạn nghĩ xã hội hiện tại cần cải thiện điều gì nhất?\n"
+                    "**Câu 3: Bạn nghĩ xã hội hiện tại cần cải thiện điều gì nhất?\n"
                     "a) Công nghệ và đổi mới\n"
                     "b) Giáo dục và tri thức\n"
                     "c) Sức khỏe và môi trường\n"
                     "d) Công bằng và phát triển cộng đồng\n"
                     "e) Khác\n\n"
                     
-                    "**Câu 4:** Nếu bạn có thể đóng góp cho thế giới, bạn muốn đóng góp theo cách nào?\n"
+                    "**Câu 4: Nếu bạn có thể đóng góp cho thế giới, bạn muốn đóng góp theo cách nào?\n"
                     "a) Tạo ra sản phẩm hữu ích\n"
                     "b) Giúp người khác phát triển kỹ năng\n"
                     "c) Giải quyết vấn đề môi trường/xã hội\n"
                     "d) Mang lại niềm vui và cảm hứng\n"
                     "e) Khác\n\n"
                     
-                    "**Câu 5:** Bạn nhận được lời khen nhiều nhất ở khả năng nào?\n"
+                    "**Câu 5: Bạn nhận được lời khen nhiều nhất ở khả năng nào?\n"
                     "a) Giao tiếp và thuyết phục\n"
                     "b) Phân tích và xử lý dữ liệu\n"
                     "c) Tư duy sáng tạo\n"
                     "d) Lập kế hoạch và tổ chức\n"
                     "e) Khác\n\n"
                     
-                    "**Câu 6:** Khi đối mặt với một vấn đề khó, bạn thường:\n"
+                    "**Câu 6: Khi đối mặt với một vấn đề khó, bạn thường:\n"
                     "a) Tìm cách sáng tạo để giải quyết\n"
                     "b) Phân tích nguyên nhân cặn kẽ\n"
                     "c) Hỏi ý kiến và hợp tác cùng người khác\n"
                     "d) Lập kế hoạch cụ thể và từng bước\n"
                     "e) Khác\n\n"
                     
-                    "**Câu 7:** Lĩnh vực nào bạn nghĩ mình có thể kiếm sống lâu dài?\n"
+                    "**Câu 7: Lĩnh vực nào bạn nghĩ mình có thể kiếm sống lâu dài?\n"
                     "a) Công nghệ thông tin và AI\n"
                     "b) Giáo dục và đào tạo\n"
                     "c) Kinh doanh và marketing\n"
                     "d) Y tế và chăm sóc sức khỏe\n"
                     "e) Khác\n\n"
                     
-                    "**Câu 8:** Nếu được chọn một kỹ năng để phát triển chuyên nghiệp, bạn chọn:\n"
+                    "**Câu 8: Nếu được chọn một kỹ năng để phát triển chuyên nghiệp, bạn chọn:\n"
                     "a) Lập trình và công nghệ\n"
                     "b) Giao tiếp và ngoại ngữ\n"
                     "c) Quản lý dự án\n"
@@ -123,13 +123,18 @@ class ApplyXChatbot:
                     "e) Khác\n\n"
                     
                     "**Hướng dẫn thực hiện:**\n"
-                    "- QUAN TRỌNG: Phải hỏi chính xác theo đúng cấu trúc trên, không được thay đổi nội dung câu hỏi hoặc các lựa chọn a, b, c, d, e với các câu hỏi cơ bản, không thêm giải thích hoặc ký tự thừa\n"
+                    "- QUAN TRỌNG: Phải hỏi chính xác theo đúng cấu trúc trên, không được thay đổi nội dung câu hỏi hoặc các lựa chọn a, b, c, d, e với các câu hỏi cơ bản, không cảm ơn, không thêm giải thích hoặc ký tự thừa, không in đậm không in nghiêng\n"
                     "- Hỏi từng câu một, đợi tôi trả lời trước khi chuyển sang câu tiếp theo\n"
-                    "- Sau 8 câu cơ bản, tạo thêm 10 câu hỏi cá nhân hóa dựa trên câu trả lời của tôi\n"
-                    "- Các câu hỏi bạn tạo ra hãy tuân thủ quy tắc hiển thị sau:"
-                    "- Option 9: câu hỏi bạn tạo ra..."
+                    "- Sau 8 câu cơ bản (Câu 1 đến Câu 8), tạo thêm CHÍNH XÁC 10 câu hỏi cá nhân hóa (từ Option 9 đến Option 18) dựa trên câu trả lời của tôi\n"
+                    "- 10 câu hỏi bổ sung phải tuân thủ quy tắc hiển thị sau:\n"
+                    "  + Option 9: câu hỏi bạn tạo ra...\n"
+                    "  + Option 10: câu hỏi bạn tạo ra...\n"
+                    "  + Option 11: câu hỏi bạn tạo ra...\n"
+                    "  + ...\n"
+                    "  + Option 18: câu hỏi bạn tạo ra...\n"
+                    "- BẮT BUỘC: Phải hỏi đủ 18 câu hỏi (8 câu cố định + 10 câu cá nhân hóa)\n"
                     "- Các câu hỏi bổ sung phải bám sát vào người trả lời để hiểu rõ hơn về đam mê, khả năng, giá trị và nhu cầu thị trường của họ\n"
-                    "- Khi tôi trả lời xong 18 câu hỏi, hãy trả về kết quả theo đúng cấu trúc JSON sau (chỉ trả về JSON, không thêm giải thích hoặc ký tự thừa):\n"
+                    "- Chỉ sau khi tôi trả lời xong TẤT CẢ 18 câu hỏi, hãy trả về kết quả theo đúng cấu trúc JSON sau (chỉ trả về JSON, không thêm giải thích hoặc ký tự thừa):\n"
                     "{"
                     "\"careers\": ["
                         "{"
@@ -147,25 +152,27 @@ class ApplyXChatbot:
                         "..."
                     "]"
                     "}"
-                "- Mỗi nghề nghiệp là một object trong mảng \"careers\". Các trường số là số nguyên, color là mã màu hex, explanation là chuỗi."
-                "- Chỉ trả về đúng cấu trúc JSON trên, không thêm bất kỳ văn bản nào khác."
+                    "- Mỗi nghề nghiệp là một object trong mảng \"careers\". Các trường số là số nguyên, color là mã màu hex, explanation là chuỗi.\n"
+                    "- BẮT BUỘC: Trong mảng \"careers\" phải có ít nhất 3 nghề nghiệp khác nhau.\n"
+                    "- Chỉ trả về đúng cấu trúc JSON trên, không thêm bất kỳ văn bản nào khác."
                 ]
             },
             {
                 "role": "model",
                 "parts": [
                     "Đã hiểu rõ! Tôi đã ghi nhận đầy đủ yêu cầu của bạn về cuộc khảo sát Ikigai:\n\n"
-                    "Tôi sẽ thực hiện chính xác 18 câu hỏi tổng cộng\n"
-                    "Cụ thể, sẽ có 8 câu hỏi cơ bản và tiếp theo là 10 câu hỏi bổ sung\n"
-                    "Tất cả các câu hỏi sẽ được hỏi theo ĐÚNG CẤU TRÚC bạn đã cung cấp, không thay đổi gì, không thêm giải thích, nhận xét, chào hỏi hoặc ký tự thừa\n"
-                    "8 câu hỏi đầu phải có chữ \"Câu thứ tự câu hỏi\" ở đầu ví dụ: Câu 1: ... "
-                    "10 câu hỏi tiếp theo sẽ được cá nhân hóa dựa trên câu trả lời của bạn, đầu ra đúng theo cấu trúc có chữ \"Option thứ tự câu hỏi\" ở đầu mỗi câu hỏi ví dụ Option 9:... \n"
-                    "Hỏi từng câu một và đợi câu trả lời\n"
-                    "Kết thúc bằng danh sách nghề nghiệp phù hợp với giải thích chi tiết theo 4 yếu tố Ikigai\n\n"
-                    "Tôi đã sẵn sàng! Khi nào bạn nói \"Bắt đầu khảo sát ikigai\", tôi sẽ bắt đầu với câu hỏi đầu tiên theo đúng format đã được cung cấp."
+                    "✅ Tôi sẽ thực hiện chính xác 18 câu hỏi tổng cộng\n"
+                    "✅ Cụ thể: 8 câu hỏi cố định (Câu 1 → Câu 8) + 10 câu hỏi cá nhân hóa (Option 9 → Option 18)\n"
+                    "✅ 8 câu hỏi đầu phải có chữ \"Câu [số]\" ở đầu ví dụ: Câu 1: ..., Câu 2: ..., v.v.\n"
+                    "✅ 10 câu hỏi tiếp theo sẽ có chữ \"Option [số]\" ở đầu từ Option 9 đến Option 18\n"
+                    "✅ Tất cả các câu hỏi sẽ được hỏi theo ĐÚNG CẤU TRÚC bạn đã cung cấp, không cảm ơn, giải thích, không in đậm in nghiêng\n"
+                    "✅ Hỏi từng câu một và đợi câu trả lời\n"
+                    "✅ Chỉ sau khi hoàn thành đủ 18 câu hỏi mới trả về kết quả JSON\n\n"
+                    "Tôi đã sẵn sàng! Khi nào bạn nói \"Bắt đầu khảo sát ikigai\", tôi sẽ bắt đầu với Câu 1 và tiếp tục đến Option 18 theo đúng format đã được cung cấp."
                 ]
             }
         ]
+
     
     def create_session(self, session_id: str = None) -> str:
         """
