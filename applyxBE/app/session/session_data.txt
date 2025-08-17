@@ -1,42 +1,42 @@
-session_id: session_1755411972
+session_id: session_1755413895
 result: ```json
 {
   "careers": [
     {
       "rank": 1,
-      "title": "Kỹ sư Phần mềm (Chuyên sâu Hiệu năng & Tối ưu hóa)",
-      "subtitle": "Xây dựng, tối ưu hóa hệ thống và khắc phục lỗi để đảm bảo phần mềm hoạt động hiệu quả.",
-      "averageScore": 90,
-      "worldNeedsScore": 85,
-      "paidScore": 90,
-      "loveScore": 90,
-      "goodAtScore": 95,
+      "title": "Chuyên gia Phát triển Nội dung Giáo dục Sáng tạo",
+      "subtitle": "Kết hợp nghệ thuật, tư duy phân tích và truyền thông để tạo ra tài liệu học tập hấp dẫn và hiệu quả cho học sinh.",
+      "averageScore": 91,
+      "worldNeedsScore": 95,
+      "paidScore": 85,
+      "loveScore": 95,
+      "goodAtScore": 90,
       "color": "#FFB800",
-      "explanation": "Với niềm đam mê giải quyết vấn đề logic, nghiên cứu chuyên sâu để 'fix bug' và cải thiện hiệu năng, bạn rất phù hợp với vai trò này. Khả năng phân tích dữ liệu, xử lý vấn đề cặn kẽ và lập trình tốt là nền tảng vững chắc. Xã hội luôn cần những kỹ sư tài năng để xây dựng và duy trì các hệ thống công nghệ phức tạp, đảm bảo sản phẩm hoạt động trơn tru. Đây là một trong những lĩnh vực có mức lương rất cạnh tranh, đáp ứng mong muốn về một công việc có thu nhập cao và môi trường làm việc chuyên nghiệp, tiềm năng đạt được sự 'việc nhẹ lương cao' tùy theo năng lực và lựa chọn công ty."
+      "explanation": "Nghề này tổng hòa niềm đam mê sáng tạo nghệ thuật và nghiên cứu chuyên sâu của bạn với mong muốn cải thiện giáo dục thông qua 'minh họa cụ thể'. Bạn có khả năng phân tích dữ liệu để đảm bảo tính logic, khoa học cho các dự án, đồng thời sử dụng tư duy sáng tạo để thiết kế các tài liệu hấp dẫn. Kỹ năng giao tiếp và ngoại ngữ sẽ giúp bạn truyền tải thông điệp một cách hiệu quả, đóng vai trò 'cầu nối' và 'phương tiện truyền đạt' giá trị đến học sinh và cộng đồng. Lĩnh vực giáo dục và đào tạo cũng là nơi bạn tin rằng mình có thể kiếm sống lâu dài."
     },
     {
       "rank": 2,
-      "title": "Kỹ sư DevOps / Site Reliability Engineer (SRE)",
-      "subtitle": "Đảm bảo độ tin cậy, khả năng mở rộng và hiệu quả vận hành của các hệ thống phần mềm.",
-      "averageScore": 88,
-      "worldNeedsScore": 85,
-      "paidScore": 88,
-      "loveScore": 90,
+      "title": "Nhà Nghiên cứu & Phát triển Chương trình Giáo dục",
+      "subtitle": "Áp dụng tư duy phân tích và sáng tạo để thiết kế, tối ưu hóa các chương trình đào tạo, tài liệu học tập.",
+      "averageScore": 85,
+      "worldNeedsScore": 90,
+      "paidScore": 75,
+      "loveScore": 85,
       "goodAtScore": 90,
-      "color": "#2196F3",
-      "explanation": "Bạn có niềm yêu thích mạnh mẽ với việc giải quyết các vấn đề hệ thống, đặc biệt là 'fix bug' và tìm cách cải thiện hiệu năng, tính khả dụng. Với kỹ năng phân tích sâu sắc các nguyên nhân gây lỗi và khả năng lập trình để tự động hóa quy trình, bạn sẽ xuất sắc trong vai trò này. Thế giới cần những chuyên gia đảm bảo các dịch vụ trực tuyến hoạt động liên tục và ổn định. Về mặt tài chính, đây là một trong những vai trò được trả lương cao nhất trong ngành IT do tính chất quan trọng và phức tạp của công việc, góp phần hiện thực hóa mong muốn về mức lương tốt."
+      "color": "#4CAF50",
+      "explanation": "Dựa trên khả năng nghiên cứu chuyên sâu và phân tích dữ liệu, nghề này phù hợp với mong muốn đóng góp vào giáo dục bằng cách tạo ra các chương trình học logic và khoa học. Khả năng tìm cách sáng tạo để giải quyết vấn đề và tự học sẽ giúp bạn không ngừng đổi mới. Mặc dù ít nhấn mạnh vào khía cạnh nghệ thuật trực quan hơn nghề nội dung, nhưng vẫn có không gian để áp dụng tư duy sáng tạo vào cấu trúc và phương pháp truyền tải kiến thức. Lĩnh vực giáo dục và đào tạo là mảnh đất màu mỡ cho sự phát triển chuyên môn này."
     },
     {
       "rank": 3,
-      "title": "Chuyên gia Phát triển & Đào tạo Kỹ thuật (Technical Trainer/Mentor)",
-      "subtitle": "Sử dụng kiến thức chuyên sâu và kỹ năng phân tích để chia sẻ, nâng cao trình độ cộng đồng công nghệ.",
-      "averageScore": 83,
-      "worldNeedsScore": 90,
-      "paidScore": 75,
-      "loveScore": 80,
-      "goodAtScore": 85,
-      "color": "#4CAF50",
-      "explanation": "Bạn không chỉ yêu thích việc nghiên cứu sâu và giải quyết vấn đề kỹ thuật mà còn có mong muốn giúp đỡ người khác phát triển kỹ năng, đặc biệt trong lĩnh vực giáo dục và tri thức. Khả năng phân tích và xử lý dữ liệu tốt sẽ giúp bạn tổng hợp và truyền đạt thông tin phức tạp một cách rõ ràng. Xã hội rất cần những người có năng lực truyền đạt kiến thức công nghệ hiệu quả để nâng cao mặt bằng chung. Vai trò này có thể mang lại thu nhập tốt thông qua các khóa học, tư vấn, hoặc vị trí 'Developer Advocate' trong các công ty lớn, nơi bạn có thể vừa làm việc vừa chia sẻ kiến thức một cách chuyên nghiệp."
+      "title": "Chuyên viên Marketing Giáo dục / Nội dung",
+      "subtitle": "Sử dụng khả năng sáng tạo, phân tích và giao tiếp để quảng bá các dự án, sản phẩm giáo dục hấp dẫn.",
+      "averageScore": 79,
+      "worldNeedsScore": 70,
+      "paidScore": 80,
+      "loveScore": 75,
+      "goodAtScore": 90,
+      "color": "#2196F3",
+      "explanation": "Với khả năng giao tiếp, ngoại ngữ xuất sắc (làm cầu nối và phương tiện truyền đạt), kết hợp với kỹ năng phân tích dữ liệu và tư duy sáng tạo, bạn có thể tỏa sáng trong lĩnh vực marketing, đặc biệt là marketing cho các sản phẩm/dịch vụ giáo dục. Bạn có thể tạo ra các chiến dịch truyền thông hấp dẫn, sử dụng hình ảnh nghệ thuật và thông điệp logic, khoa học để thu hút đối tượng mục tiêu, đồng thời phân tích hiệu quả để tối ưu. Đây là sự giao thoa thú vị giữa đam mê sáng tạo, khả năng thực tế và lĩnh vực bạn nghĩ có thể kiếm sống."
     }
   ]
 }
