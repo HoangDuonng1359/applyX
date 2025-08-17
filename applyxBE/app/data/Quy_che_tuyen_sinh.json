@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "ten_tai_lieu": "Thông Tin Tuyển Sinh Năm 2025 Bậc Đại Học",
+    "co_so_dao_tao": "Trường Đại học Công nghệ - Đại học Quốc gia Hà Nội",
+    "nam_tuyen_sinh": 2025,
+    "hinh_thuc_dao_tao": "Chính quy"
+  },
+  "thong_tin_chung": {
+    "ten_co_so_dao_tao": "Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội",
+    "ma_co_so": "QHI",
+    "dia_chi_tru_so": "Nhà E3, 144 Xuân Thủy, Cầu Giấy, Hà Nội",
+    "lien_he": {
+      "dien_thoai": "024 37 547 865",
+      "ghi_chu_dien_thoai": "trong giờ hành chính"
+    },
+    "trang_thong_tin_dien_tu": {
+      "chung": "https://uet.vnu.edu.vn",
+      "tuyen_sinh": "https://tuyensinh.uet.vnu.edu.vn",
+      "mang_xa_hoi": "https://www.facebook.com/UET.VNUH"
+    },
+    "dia_chi_cong_khai": {
+      "quy_che_tuyen_sinh": "https://tuyensinh.uet.vnu.edu.vn/tin-tuyen-sinh/",
+      "hoat_dong_dao_tao": "https://uet.vnu.edu.vn"
+    }
+  },
+  "tuyen_sinh_dai_hoc": {
+    "doi_tuong_dieu_kien_du_tuyen": [
+      "Người đã được công nhận tốt nghiệp trung học phổ thông của Việt Nam hoặc có bằng tốt nghiệp của nước ngoài được công nhận trình độ tương đương.",
+      "Đạt ngưỡng đầu vào theo quy định của Trường Đại học Công nghệ.",
+      "Có đủ sức khoẻ để học tập theo quy định hiện hành.",
+      "Có đủ thông tin cá nhân, hồ sơ dự tuyển theo quy định.",
+      "Đối với thí sinh khuyết tật bị suy giảm khả năng học tập, nếu có nguyện vọng đăng ký dự tuyển, Nhà trường sẽ xem xét tiếp nhận vào học các ngành đào tạo phù hợp với tình trạng sức khỏe, trong phạm vi điều kiện đào tạo cho phép của Trường."
+    ],
+    "phuong_thuc_tuyen_sinh": [
+      {
+        "stt": 1,
+        "ten_phuong_thuc": "Xét tuyển thẳng",
+        "chi_tieu": "Không giới hạn"
+      },
+      {
+        "stt": 2,
+        "ten_phuong_thuc": "Xét tuyển theo kế hoạch chung của Bộ GD&ĐT",
+        "chi_tiet_phuong_thuc": [
+          "Xét tuyển theo kết quả thi tốt nghiệp THPT năm 2025",
+          "Xét tuyển theo kết quả thi đánh giá năng lực do ĐHQGHN tổ chức (HSA)",
+          "Xét tuyển theo kết quả kỳ thi chuẩn hóa quốc tế SAT (Scholastic Assessment Test)"
+        ],
+        "chi_tieu": "Tổng chỉ tiêu trừ đi số tuyển thẳng"
+      }
+    ],
+    "chi_tiet_phuong_thuc": {
+      "xet_tuyen_thang": {
+        "mo_ta": "Không giới hạn số nguyện vọng, áp dụng với thí sinh diện theo Điều 8 Quy chế tuyển sinh của Bộ GD&ĐT.",
+        "dieu_kien_hsg": "Thí sinh đoạt giải nhất, nhì, ba trong kỳ thi chọn học sinh giỏi quốc gia, quốc tế hoặc thi khoa học, kỹ thuật cấp quốc gia, quốc tế do Bộ GD&ĐT tổ chức, cử tham gia; thời gian đoạt giải không quá 3 năm tính tới thời điểm xét tuyển thẳng và tốt nghiệp THPT năm 2025 được xét tuyển thẳng vào bậc đại học theo ngành phù hợp với môn thi hoặc lĩnh vực, nội dung đề tài dự thi mà thí sinh đã đoạt giải.",
+        "nganh_xet_tuyen_theo_mon_dat_giai": [
+          {"stt": 1, "mon_thi_dat_giai": "Toán", "nganh_xet_tuyen_thang": "Tất cả các ngành"},
+          {"stt": 2, "mon_thi_dat_giai": "Tin học", "nganh_xet_tuyen_thang": "Tất cả các ngành"},
+          {"stt": 3, "mon_thi_dat_giai": "Vật lý", "nganh_xet_tuyen_thang": "Tất cả các ngành"},
+          {"stt": 4, "mon_thi_dat_giai": "Hóa học", "nganh_xet_tuyen_thang": "Tất cả các ngành"},
+          {"stt": 5, "mon_thi_dat_giai": "Sinh học", "nganh_xet_tuyen_thang": "Công nghệ nông nghiệp; Công nghệ sinh học"}
+        ]
+      },
+      "xet_tuyen_theo_ket_qua_thpt": {
+        "mo_ta": "Áp dụng đối với thí sinh có điểm thi tốt nghiệp THPT năm 2025 đạt ngưỡng đầu vào do Trường ĐHCN quy định cho từng ngành đào tạo.",
+        "to_hop_mon_xet_tuyen": [
+          {"stt": 1, "to_hop": "A00", "mon": "Toán, Lý, Hóa", "nganh_xet_tuyen": "Tất cả các ngành"},
+          {"stt": 2, "to_hop": "A01", "mon": "Toán, Lý, Anh", "nganh_xet_tuyen": "Tất cả các ngành"},
+          {"stt": 3, "to_hop": "X26", "mon": "Toán, Anh, Tin", "nganh_xet_tuyen": "Tất cả các ngành"},
+          {"stt": 4, "to_hop": "X06", "mon": "Toán, Lý, Tin", "nganh_xet_tuyen": "Tất cả các ngành"},
+          {"stt": 5, "to_hop": "D01", "mon": "Toán, Văn, Anh (Toán hệ số 2)", "nganh_xet_tuyen": "Tất cả các ngành"},
+          {"stt": 6, "to_hop": "B00", "mon": "Toán, Hóa, Sinh", "nganh_xet_tuyen": "Công nghệ nông nghiệp; Công nghệ sinh học"}
+        ],
+        "quy_doi_diem_tieng_anh": {
+          "mo_ta": "Thí sinh có chứng chỉ tiếng Anh quốc tế (IELTS Academic hoặc TOEFL iBT) còn thời hạn sử dụng 2 năm kể từ ngày thi, sẽ được quy đổi thành điểm môn tiếng Anh để sử dụng trong tổ hợp xét tuyển.",
+          "bang_quy_doi": [
+            {"stt": 1, "ielts_academic": 5.5, "toefl_ibt": 72, "diem_quy_doi_10": 8.5},
+            {"stt": 2, "ielts_academic": 6.0, "toefl_ibt": 79, "diem_quy_doi_10": 9.0},
+            {"stt": 3, "ielts_academic": 6.5, "toefl_ibt": 88, "diem_quy_doi_10": 9.5},
+            {"stt": 4, "ielts_academic": 7.0, "toefl_ibt": 96, "diem_quy_doi_10": 10},
+            {"stt": 5, "ielts_academic": 8.5, "toefl_ibt": 114, "diem_quy_doi_10": 10}
+          ],
+          "ghi_chu": [
+            "Chứng chỉ Tiếng Anh phải đủ 4 kỹ năng. Điểm tối thiểu từng kỹ năng là 5 (theo thang 10) và còn thời hạn sử dụng 02 năm kể từ ngày thi.",
+            "Không chấp nhận chứng chỉ thi theo hình thức trực tuyến."
+          ]
+        }
+      },
+      "xet_tuyen_theo_hsa": {
+        "mo_ta": "Áp dụng đối với thí sinh có kết quả thi HSA còn thời hạn sử dụng trong vòng 2 năm kể từ ngày dự thi và đạt ngưỡng đầu vào do Trường ĐHCN quy định đối với từng ngành đào tạo. Áp dụng cho tất cả các ngành tuyển sinh năm 2025 của Trường."
+      },
+      "xet_tuyen_theo_sat": {
+        "mo_ta": "Áp dụng đối với thí sinh có kết quả kỳ thi chuẩn hóa quốc tế SAT còn thời hạn sử dụng trong vòng 2 năm kể từ ngày dự thi, và đạt ngưỡng bảo đảm chất lượng đầu vào do Trường ĐHCN quy định đối với từng ngành đào tạo. Áp dụng cho tất cả các ngành tuyển sinh năm 2025 của Trường."
+      }
+    },
+    "quy_tac_quy_doi": {
+      "quy_doi_giua_phuong_thuc": [
+        "Trường ĐHCN sử dụng thang điểm 30 để quy đổi ngưỡng đầu vào và điểm trúng tuyển giữa các phương thức tuyển sinh khác nhau (thi tốt nghiệp THPT, HSA, SAT).",
+        "Việc quy đổi được thực hiện theo quy tắc quy đổi do Bộ GD&ĐT hướng dẫn tại Công văn số 2457/BGDĐT-GDĐH ngày 19/5/2025, nhằm bảo đảm tính tương đương, công bằng và thống nhất trong xét tuyển.",
+        "Bảng quy đổi sẽ được công bố công khai, áp dụng thống nhất cho tất cả các thí sinh trong cùng một kỳ tuyển sinh vào cùng thời gian công bố ngưỡng bảo đảm chất lượng đầu vào."
+      ],
+      "nguong_dau_vao": [
+        "Trường ĐHCN sẽ công bố ngưỡng đầu vào theo kế hoạch chung của Bộ GD&ĐT, sau khi có kết quả kỳ thi tốt nghiệp THPT năm 2025 và trước ngày 21/7/2025.",
+        "Ngưỡng đầu vào được Trường quy định riêng đối với từng ngành đào tạo."
+      ],
+      "diem_trung_tuyen": [
+        "Trường ĐHCN sẽ công bố điểm trúng tuyển theo kế hoạch chung của Bộ GD&ĐT, sau khi hoàn tất quy trình xét tuyển và xử lý nguyện vọng theo quy định (trước ngày 22/8/2025).",
+        "Điểm trúng tuyển được Trường xác định và công bố riêng cho từng ngành đào tạo."
+      ]
+    },
+    "chi_tieu_tuyen_sinh": {
+      "tong_chi_tieu": 4020,
+      "ma_truong": "QHI",
+      "thong_tin_chung_phuong_thuc": {
+        "ma_phuong_thuc": {
+          "xet_tuyen_thang": 301,
+          "dgnl_hsa": 401,
+          "ccqt_sat": 415,
+          "khac_dbdt": 500,
+          "thpt": 100
+        },
+        "to_hop_ap_dung_chung": "A00; A01; X06; X26; D01 (riêng D01 có Toán hệ số 2)",
+        "ghi_chu_chung": "Riêng CN10 và CN21 thêm tổ hợp B00"
+      },
+      "danh_sach_nganh": [
+        {"stt": 1, "ma_xet_tuyen": "CN1", "ten_nganh": "Công nghệ thông tin", "ma_nganh": 7480201, "ten_chuong_trinh_dao_tao": "Công nghệ thông tin", "chi_tieu": 420},
+        {"stt": 2, "ma_xet_tuyen": "CN2", "ten_nganh": "Kỹ thuật máy tính", "ma_nganh": 7480106, "ten_chuong_trinh_dao_tao": "Kỹ thuật máy tính", "chi_tieu": 420},
+        {"stt": 3, "ma_xet_tuyen": "CN3", "ten_nganh": "Vật lý kỹ thuật", "ma_nganh": 7520401, "ten_chuong_trinh_dao_tao": "Vật lý kỹ thuật", "chi_tieu": 120},
+        {"stt": 4, "ma_xet_tuyen": "CN4", "ten_nganh": "Cơ kỹ thuật", "ma_nganh": 7520101, "ten_chuong_trinh_dao_tao": "Cơ kỹ thuật", "chi_tieu": 60},
+        {"stt": 5, "ma_xet_tuyen": "CN5", "ten_nganh": "Công nghệ kỹ thuật xây dựng", "ma_nganh": 7510103, "ten_chuong_trinh_dao_tao": "Công nghệ kỹ thuật xây dựng", "chi_tieu": 180},
+        {"stt": 6, "ma_xet_tuyen": "CN6", "ten_nganh": "Công nghệ kỹ thuật cơ điện tử", "ma_nganh": 7510203, "ten_chuong_trinh_dao_tao": "Công nghệ kỹ thuật cơ điện tử", "chi_tieu": 180},
+        {"stt": 7, "ma_xet_tuyen": "CN7", "ten_nganh": "Thí điểm", "ma_nganh": 7519001, "ten_chuong_trinh_dao_tao": "Công nghệ hàng không vũ trụ*", "chi_tieu": 120},
+        {"stt": 8, "ma_xet_tuyen": "CN8", "ten_nganh": "Khoa học máy tính", "ma_nganh": 7480101, "ten_chuong_trinh_dao_tao": "Khoa học máy tính", "chi_tieu": 420},
+        {"stt": 9, "ma_xet_tuyen": "CN9", "ten_nganh": "Công nghệ kỹ thuật điện tử - viễn thông", "ma_nganh": 7510302, "ten_chuong_trinh_dao_tao": "Công nghệ kỹ thuật điện tử – viễn thông / Công nghệ kỹ thuật điện tử – viễn thông định hướng chuyên ngành Thiết kế vi mạch", "chi_tieu": 480},
+        {"stt": 10, "ma_xet_tuyen": "CN10", "ten_nganh": "Công nghệ nông nghiệp*", "ma_nganh": 7519002, "ten_chuong_trinh_dao_tao": "Công nghệ nông nghiệp*", "chi_tieu": 60},
+        {"stt": 11, "ma_xet_tuyen": "CN11", "ten_nganh": "Kỹ thuật điều khiển và tự động hoá", "ma_nganh": 7520216, "ten_chuong_trinh_dao_tao": "Kỹ thuật điều khiển và tự động hoá", "chi_tieu": 120},
+        {"stt": 12, "ma_xet_tuyen": "CN12", "ten_nganh": "Trí tuệ nhân tạo", "ma_nganh": 7480107, "ten_chuong_trinh_dao_tao": "Trí tuệ nhân tạo", "chi_tieu": 300},
+        {"stt": 13, "ma_xet_tuyen": "CN13", "ten_nganh": "Kỹ thuật năng lượng*", "ma_nganh": 7520406, "ten_chuong_trinh_dao_tao": "Kỹ thuật năng lượng*", "chi_tieu": 60},
+        {"stt": 14, "ma_xet_tuyen": "CN14", "ten_nganh": "Hệ thống thông tin", "ma_nganh": 7480104, "ten_chuong_trinh_dao_tao": "Hệ thống thông tin", "chi_tieu": 240},
+        {"stt": 15, "ma_xet_tuyen": "CN15", "ten_nganh": "Mạng máy tính và truyền thông dữ liệu", "ma_nganh": 7480102, "ten_chuong_trinh_dao_tao": "Mạng máy tính và truyền thông dữ liệu", "chi_tieu": 120},
+        {"stt": 16, "ma_xet_tuyen": "CN17", "ten_nganh": "Kỹ thuật Robot*", "ma_nganh": 7520217, "ten_chuong_trinh_dao_tao": "Kỹ thuật Robot*", "chi_tieu": 120},
+        {"stt": 17, "ma_xet_tuyen": "CN18", "ten_nganh": "Thiết kế công nghiệp và Đồ họa*", "ma_nganh": "75290a1", "ten_chuong_trinh_dao_tao": "Thiết kế công nghiệp và Đồ họa*", "chi_tieu": 240},
+        {"stt": 18, "ma_xet_tuyen": "CN19", "ten_nganh": "Công nghệ vật liệu", "ma_nganh": 7510402, "ten_chuong_trinh_dao_tao": "Công nghệ vật liệu và Vi điện tử", "chi_tieu": 120},
+        {"stt": 19, "ma_xet_tuyen": "CN20", "ten_nganh": "Khoa học dữ liệu", "ma_nganh": 7460108, "ten_chuong_trinh_dao_tao": "Khoa học và Kỹ thuật dữ liệu", "chi_tieu": 120},
+        {"stt": 20, "ma_xet_tuyen": "CN21", "ten_nganh": "Công nghệ sinh học", "ma_nganh": 7420201, "ten_chuong_trinh_dao_tao": "Công nghệ kỹ thuật sinh học", "chi_tieu": 120}
+      ],
+      "ghi_chu_chi_tieu": [
+        "* Chương trình đào tạo thí điểm.",
+        "Tổ hợp xét tuyển được hiểu là tổ hợp môn dùng để xét tuyển theo kết quả thi THPT năm 2025, bao gồm cả trường hợp thí sinh sử dụng chứng chỉ tiếng Anh quốc tế còn thời hạn sử dụng để quy đổi điểm thay cho môn tiếng Anh trong tổ hợp xét tuyển theo quy định của Trường.",
+        "A00: Toán, Lý, Hóa; A01: Toán, Anh, Lý; B00: Toán, Hóa, Sinh;",
+        "X26: Toán, Anh, Tin; X06: Toán, Lý, Tin; D01: Toán, Văn, Anh (Toán hệ số 2)",
+        "Chỉ tiêu tuyển sinh theo từng ngành có thể được điều chỉnh để phù hợp với thực tế nguồn tuyển, nhưng không làm ảnh hưởng đến quyền lợi của thí sinh dự tuyển và không thay đổi tổng chỉ tiêu tuyển sinh của Nhà trường và không vượt quá năng lực đào tạo của từng ngành.",
+        "Lưu ý: Từ năm 2026 Trường ĐHCN dự kiến không tuyển sinh tổ hợp D01"
+      ]
+    },
+    "cac_thong_tin_khac": {
+      "dieu_kien_phu": [
+        "Trường ĐHCN không tổ chức sơ tuyển;",
+        "Trong quá trình xét tuyển, đối với các thí sinh có điểm xét tuyển bằng nhau ở cuối danh sách và vượt quá chỉ tiêu, hệ thống sẽ ưu tiên thí sinh có thứ tự nguyện vọng cao hơn.",
+        "Trường ĐHCN không áp dụng thêm tiêu chí phụ ngoài các quy định tại Quy chế tuyển sinh hiện hành và hướng dẫn về xét tuyển, lọc ảo của Bộ GD&ĐT."
+      ],
+      "diem_cong": {
+        "quy_dinh_chung": "Tổng điểm cộng không vượt quá 10% mức điểm tối đa của thang điểm xét (tối đa 3 điểm đối với thang điểm 30).",
+        "doi_tuong_ap_dung": [
+          "Thí sinh thuộc diện ưu tiên xét tuyển theo quy định tại Điều 8 Quy chế tuyển sinh đại học của Bộ GD&ĐT (chi tiết mức điểm cộng xem tại Mục 7);",
+          "Thí sinh thuộc diện ưu tiên xét tuyển theo khoản 3, Điều 8 Quy chế tuyển sinh đại học của ĐHQGHN (chi tiết mức điểm cộng xem tại Mục 7);",
+          "Thí sinh xét tuyển theo kết quả thi THPT năm 2025 bằng tổ hợp không có môn tiếng Anh hoặc xét tuyển theo kết quả thi HSA không có phần tiếng Anh và đồng thời có chứng chỉ tiếng Anh quốc tế còn thời hạn (IELTS Academic đạt từ 5.5 trở lên, TOEFL iBT đạt từ 72 điểm trở lên), đạt trình độ từ bậc 4 trở lên theo Khung năng lực ngoại ngữ 6 bậc dùng cho Việt Nam sẽ được cộng điểm thưởng vào tổng điểm xét tuyển."
+        ],
+        "bang_diem_cong_ngoai_ngu": [
+          {"stt": 1, "khung_nang_luc": null, "ielts_academic": 5.5, "toefl_ibt": 72, "diem_cong": 0},
+          {"stt": 2, "khung_nang_luc": "Bậc 4", "ielts_academic": 6.0, "toefl_ibt": 79, "diem_cong": 1.0},
+          {"stt": 3, "khung_nang_luc": "Bậc 4", "ielts_academic": 6.5, "toefl_ibt": 88, "diem_cong": 1.0},
+          {"stt": 4, "khung_nang_luc": "Bậc 5", "ielts_academic": 7.0, "toefl_ibt": 96, "diem_cong": 1.5},
+          {"stt": 5, "khung_nang_luc": "Bậc 6", "ielts_academic": 8.5, "toefl_ibt": 114, "diem_cong": 2.0}
+        ],
+        "ghi_chu": "Thí sinh đạt nhiều thành tích/đủ điều kiện cộng điểm theo nhiều diện chỉ được tính điểm cộng một lần, với mức điểm cao nhất."
+      },
+      "tieu_chi_phan_chuong_trinh_dao_tao_cn9": {
+        "mo_ta": "Riêng ngành Công nghệ Kỹ thuật Điện tử – Viễn thông (mã ngành: CN9) có thêm việc lựa chọn sinh viên vào học theo định hướng chuyên ngành Thiết kế vi mạch được thực hiện sau năm học thứ nhất.",
+        "can_cu": [
+          "Chuẩn chương trình đào tạo về vi mạch bán dẫn trình độ đại học, thạc sĩ được ban hành tại Quyết định số 1314/QĐ-BGDĐT ngày 13/5/2025 của Bộ GD&ĐT.",
+          "Nguyện vọng của sinh viên.",
+          "Kết quả đầu vào.",
+          "Kết quả học tập và rèn luyện trong năm thứ nhất."
+        ]
+      }
+    },
+    "to_chuc_tuyen_sinh": {
+      "hinh_thuc_tuyen_sinh": "Trường ĐHCN tuyển sinh bằng hình thức xét tuyển theo kế hoạch tuyển sinh chung của Bộ GD&ĐT.",
+      "hinh_thuc_thu_ho_so": {
+        "mo_ta": "Trực tuyến/online",
+        "chi_tiet": "Đối với các phương thức xét tuyển gồm: tuyển thẳng, dự bị dân tộc, HSA, SAT, và sử dụng chứng chỉ tiếng Anh quốc tế (IELTS Academic hoặc TOEFL iBT) để quy đổi thay thế điểm thi môn tiếng Anh trong tổ hợp xét tuyển hoặc các minh chứng thành tích để được cộng điểm, thí sinh phải khai báo hồ sơ, nộp minh chứng và đăng ký xét tuyển đồng thời trên hai hệ thống sau:",
+        "he_thong_dang_ky": [
+          {
+            "ten_he_thong": "Hệ thống tuyển sinh trực tuyến của Trường ĐHCN",
+            "dia_chi": "https://tuyensinh.uet.vnu.edu.vn/",
+            "ghi_chu": "Mục 'Đăng ký xét tuyển', thời gian từ ngày 01/6/2025 đến 17h00 ngày 30/6/2025"
+          },
+          {
+            "ten_he_thong": "Hệ thống tuyển sinh của Bộ Giáo dục và Đào tạo",
+            "dia_chi": null,
+            "ghi_chu": "Theo kế hoạch chung do Bộ GD&ĐT ban hành."
+          }
+        ],
+        "doi_voi_thpt": "Thí sinh đăng ký xét tuyển trên hệ thống của Bộ GD&ĐT và theo kế hoạch chung của Bộ GD&ĐT."
+      },
+      "nguyen_tac_xet_tuyen": [
+        "Điểm trúng tuyển được xác định để số lượng thí sinh tuyển được theo từng ngành đào tạo phù hợp với số lượng chỉ tiêu, nhưng không thấp hơn ngưỡng đầu vào.",
+        "Trường ĐHCN xét tuyển theo ngành đào tạo (mã xét tuyển). Đối với một ngành đào tạo, tất cả thí sinh được xét chọn bình đẳng dựa trên điểm xét và điểm trúng tuyển quy đổi tương đương theo từng phương thức xét tuyển, tổ hợp xét tuyển, không phụ thuộc thứ tự ưu tiên của nguyện vọng đăng ký trừ trường hợp nhiều thí sinh có cùng điểm xét ở cuối danh sách, nếu vượt chỉ tiêu thì hệ thống sẽ ưu tiên thí sinh có nguyện vọng cao hơn.",
+        "Điểm xét tuyển được tính theo thang điểm 30 và làm tròn đến hai chữ số thập phân."
+      ]
+    },
+    "chinh_sach_uu_tien": {
+      "xet_tuyen_thang": "Trường ĐHCN xét tuyển thẳng cho các đối tượng theo Điều 8 Quy chế tuyển sinh của Bộ GD&ĐT, cụ thể tại mục 2.1.",
+      "uu_tien_xet_tuyen": {
+        "hsg_quoc_gia_quoc_te": [
+          {"giai": "Nhất", "diem_cong": 3.0},
+          {"giai": "Nhì", "diem_cong": 2.5},
+          {"giai": "Ba", "diem_cong": 2.0},
+          {"giai": "Khuyến khích hoặc giải tư KHKT", "diem_cong": 1.5}
+        ],
+        "hsg_cap_dhqghn_tinh": [
+          {"giai": "Nhất", "diem_cong": 2.5},
+          {"giai": "Nhì", "diem_cong": 2.0},
+          {"giai": "Ba", "diem_cong": 1.5}
+        ],
+        "chuong_trinh_uom_tao_tai_nang_vnu12+": [
+          {"gpa": "Xuất sắc", "diem_cong": 2.5},
+          {"gpa": "Giỏi", "diem_cong": 2.0},
+          {"gpa": "Khá", "diem_cong": 1.5}
+        ]
+      },
+      "xet_tuyen_du_bi_dai_hoc": {
+        "mo_ta": "Thí sinh là học sinh đã hoàn thành chương trình dự bị của các trường dự bị đại học, tốt nghiệp năm 2024 được ưu tiên xét tuyển phải đáp ứng được yêu cầu về ngưỡng đầu vào (là tổng điểm thi THPT của 3 môn theo tổ hợp xét tuyển năm 2024) của ngành tương ứng năm 2024. Nhà trường xét tuyển theo thứ tự từ cao xuống thấp theo điểm thi THPT năm 2024 cho đến hết chỉ tiêu được phân bổ là 1% như sau:",
+        "chi_tieu_theo_nguong": [
+          {
+            "nguong_dau_vao_2024": 22,
+            "danh_sach_nganh": [
+              {"stt": 1, "ten_nganh": "Công nghệ thông tin", "ma_xet_tuyen": "CN1", "chi_tieu": 3},
+              {"stt": 2, "ten_nganh": "Kỹ thuật máy tính", "ma_xet_tuyen": "CN2", "chi_tieu": 3},
+              {"stt": 3, "ten_nganh": "Vật lý kỹ thuật", "ma_xet_tuyen": "CN3", "chi_tieu": 3},
+              {"stt": 4, "ten_nganh": "Cơ kỹ thuật", "ma_xet_tuyen": "CN4", "chi_tieu": 1},
+              {"stt": 5, "ten_nganh": "Công nghệ kỹ thuật cơ điện tử", "ma_xet_tuyen": "CN6", "chi_tieu": 2},
+              {"stt": 6, "ten_nganh": "Công nghệ hàng không vũ trụ", "ma_xet_tuyen": "CN7", "chi_tieu": 2},
+              {"stt": 7, "ten_nganh": "Khoa học máy tính", "ma_xet_tuyen": "CN8", "chi_tieu": 3},
+              {"stt": 8, "ten_nganh": "Công nghệ kỹ thuật điện tử - viễn thông", "ma_xet_tuyen": "CN9", "chi_tieu": 3},
+              {"stt": 9, "ten_nganh": "Kỹ thuật điều khiển và tự động hóa", "ma_xet_tuyen": "CN11", "chi_tieu": 2},
+              {"stt": 10, "ten_nganh": "Trí tuệ nhân tạo", "ma_xet_tuyen": "CN12", "chi_tieu": 3},
+              {"stt": 11, "ten_nganh": "Kỹ thuật năng lượng", "ma_xet_tuyen": "CN13", "chi_tieu": 2},
+              {"stt": 12, "ten_nganh": "Hệ thống thông tin", "ma_xet_tuyen": "CN14", "chi_tieu": 2},
+              {"stt": 13, "ten_nganh": "Mạng máy tính và truyền thông dữ liệu", "ma_xet_tuyen": "CN15", "chi_tieu": 1},
+              {"stt": 14, "ten_nganh": "Kỹ thuật Robot", "ma_xet_tuyen": "CN17", "chi_tieu": 2},
+              {"stt": 15, "ten_nganh": "Thiết kế công nghiệp và đồ họa", "ma_xet_tuyen": "CN18", "chi_tieu": 2}
+            ]
+          },
+          {
+            "nguong_dau_vao_2024": 20,
+            "danh_sach_nganh": [
+              {"stt": 16, "ten_nganh": "Công nghệ kỹ thuật xây dựng", "ma_xet_tuyen": "CN5", "chi_tieu": 2},
+              {"stt": 17, "ten_nganh": "Công nghệ nông nghiệp", "ma_xet_tuyen": "CN10", "chi_tieu": 1}
+            ]
+          }
+        ],
+        "tong_chi_tieu": 37
+      },
+      "uu_tien_chung": "Trường ĐHCN thực hiện đầy đủ và nghiêm túc các chính sách ưu tiên chung trong tuyển sinh theo khu vực và theo đối tượng, cụ thể như Điều 7. Quy chế tuyển sinh đại học hiện hành của Bộ GD&ĐT."
+    },
+    "cam_ket_co_so_dao_tao": "Trường ĐHCN cam kết bảo vệ quyền lợi chính đáng của thí sinh, thực hiện giải quyết kịp thời các kiến nghị, khiếu nại liên quan đến công tác tuyển sinh. Nhà trường có trách nhiệm xử lý các trường hợp phát sinh rủi ro, bao gồm cả việc chuyển thí sinh đến hoặc chuyển đi do sai sót trong quá trình tuyển sinh, theo đúng quy định của pháp luật hiện hành, Quy chế tuyển sinh của Bộ GD&ĐT và các quy định liên quan của ĐHQGHN.",
+    "thong_tin_khac_bo_sung": {
+      "dia_diem_hoc": [
+        "Địa điểm 1: Số 144 Xuân Thủy, Cầu Giấy, Hà Nội",
+        "Địa điểm 2: Số 8 Tôn Thất Thuyết, Hà Nội",
+        "Địa điểm 3: Số 12 Kiều Mai, Hà Nội"
+      ],
+      "hoc_phi": {
+        "chi_tiet_hoc_phi_2025_2026": [
+          {
+            "muc_hoc_phi": 40000000,
+            "danh_sach_nganh_ap_dung": ["CN1", "CN2", "CN3", "CN4", "CN5", "CN6", "CN7", "CN8", "CN9", "CN13", "CN14", "CN15", "CN17"]
+          },
+          {
+            "muc_hoc_phi": 34000000,
+            "danh_sach_nganh_ap_dung": ["CN10", "CN11", "CN12", "CN18", "CN19", "CN20", "CN21"]
+          }
+        ],
+        "ghi_chu": "Mức học phí có thể được điều chỉnh cho các năm học sau, nhưng không tăng quá 15% mỗi năm."
+      }
+    },
+    "thong_tin_tuyen_sinh_2_nam_gan_nhat": {
+      "danh_sach_nganh": [
+        {"stt": 1, "ma_xet_tuyen": "CN1", "ma_nganh": 7480201, "ten_chuong_trinh_dao_tao": "Công nghệ thông tin", "nam_2023": {"chi_tieu": 180, "nhap_hoc": 173, "sat_act": 27.5, "dgnl": 25, "ielts": 28, "thpt": 27.85}, "nam_2024": {"chi_tieu": 340, "nhap_hoc": 360, "sat": 28, "alevel_act": null, "dgnl": 23.5, "ielts": 27, "thpt": 27.8}},
+        {"stt": 2, "ma_xet_tuyen": "CN10", "ma_nganh": 7519002, "ten_chuong_trinh_dao_tao": "Công nghệ nông nghiệp", "nam_2023": {"chi_tieu": 60, "nhap_hoc": 51, "sat_act": 25, "dgnl": 19, "ielts": 22, "thpt": 22}, "nam_2024": {"chi_tieu": 60, "nhap_hoc": 51, "sat": 23.4, "alevel_act": null, "dgnl": 17, "ielts": 23, "thpt": 22.5}},
+        {"stt": 3, "ma_xet_tuyen": "CN11", "ma_nganh": 7520216, "ten_chuong_trinh_dao_tao": "Kỹ thuật điều khiển và tự động hoá", "nam_2023": {"chi_tieu": 80, "nhap_hoc": 83, "sat_act": 26, "dgnl": 23.5, "ielts": 27, "thpt": 27.1}, "nam_2024": {"chi_tieu": 160, "nhap_hoc": 171, "sat": 27, "alevel_act": null, "dgnl": 22, "ielts": 26.5, "thpt": 27.05}},
+        {"stt": 4, "ma_xet_tuyen": "CN12", "ma_nganh": 7480107, "ten_chuong_trinh_dao_tao": "Trí tuệ nhân tạo", "nam_2023": {"chi_tieu": 130, "nhap_hoc": 118, "sat_act": 27.25, "dgnl": 24, "ielts": 27.5, "thpt": 27.2}, "nam_2024": {"chi_tieu": 240, "nhap_hoc": 242, "sat": 27.75, "alevel_act": 26.5, "dgnl": 22, "ielts": 27, "thpt": 27.12}},
+        {"stt": 5, "ma_xet_tuyen": "CN13", "ma_nganh": 7520406, "ten_chuong_trinh_dao_tao": "Kỹ thuật năng lượng", "nam_2023": {"chi_tieu": 60, "nhap_hoc": 55, "sat_act": 25, "dgnl": 20, "ielts": 25, "thpt": 23.8}, "nam_2024": {"chi_tieu": 80, "nhap_hoc": 97, "sat": 23.4, "alevel_act": null, "dgnl": 17, "ielts": 23, "thpt": 24.59}},
+        {"stt": 6, "ma_xet_tuyen": "CN14", "ma_nganh": 7480104, "ten_chuong_trinh_dao_tao": "Hệ thống thông tin", "nam_2023": {"chi_tieu": 60, "nhap_hoc": 72, "sat_act": 26.25, "dgnl": 23, "ielts": 26.25, "thpt": 26.95}, "nam_2024": {"chi_tieu": 160, "nhap_hoc": 158, "sat": 24, "alevel_act": null, "dgnl": 20, "ielts": 25, "thpt": 26.87}},
+        {"stt": 7, "ma_xet_tuyen": "CN15", "ma_nganh": 7480102, "ten_chuong_trinh_dao_tao": "Mạng máy tính và truyền thông dữ liệu", "nam_2023": {"chi_tieu": 60, "nhap_hoc": 65, "sat_act": 26.25, "dgnl": 23, "ielts": 26.25, "thpt": 26.25}, "nam_2024": {"chi_tieu": 80, "nhap_hoc": 84, "sat": 24, "alevel_act": null, "dgnl": 20, "ielts": 25, "thpt": 26.92}},
+        {"stt": 8, "ma_xet_tuyen": "CN16", "ma_nganh": 7480201, "ten_chuong_trinh_dao_tao": "CNTT định hướng thị trường Nhật Bản", "nam_2023": {"chi_tieu": 60, "nhap_hoc": 68, "sat_act": 27.5, "dgnl": 23.25, "ielts": 27, "thpt": 27.5}, "nam_2024": {"chi_tieu": null, "nhap_hoc": null, "sat": null, "alevel_act": null, "dgnl": null, "ielts": null, "thpt": null}},
+        {"stt": 9, "ma_xet_tuyen": "CN17", "ma_nganh": 7520217, "ten_chuong_trinh_dao_tao": "Kỹ thuật Robot", "nam_2023": {"chi_tieu": 60, "nhap_hoc": 60, "sat_act": 27, "dgnl": 22.5, "ielts": 25.5, "thpt": 25.35}, "nam_2024": {"chi_tieu": 80, "nhap_hoc": 82, "sat": 23.4, "alevel_act": null, "dgnl": 19, "ielts": 24, "thpt": 25.99}},
+        {"stt": 10, "ma_xet_tuyen": "CN18", "ma_nganh": "75290a1", "ten_chuong_trinh_dao_tao": "Thiết kế công nghiệp và đồ họa", "nam_2023": {"chi_tieu": null, "nhap_hoc": null, "sat_act": null, "dgnl": null, "ielts": null, "thpt": null}, "nam_2024": {"chi_tieu": 160, "nhap_hoc": 162, "sat": 23.4, "alevel_act": null, "dgnl": 18, "ielts": 24, "thpt": 24.64}},
+        {"stt": 11, "ma_xet_tuyen": "CN2", "ma_nganh": 7480106, "ten_chuong_trinh_dao_tao": "Kỹ thuật máy tính", "nam_2023": {"chi_tieu": 120, "nhap_hoc": 118, "sat_act": 26.25, "dgnl": 23.5, "ielts": 27, "thpt": 27.25}, "nam_2024": {"chi_tieu": 320, "nhap_hoc": 325, "sat": 26.25, "alevel_act": null, "dgnl": 20, "ielts": 26.5, "thpt": 26.97}},
+        {"stt": 12, "ma_xet_tuyen": "CN3", "ma_nganh": 7520401, "ten_chuong_trinh_dao_tao": "Vật lý kỹ thuật", "nam_2023": {"chi_tieu": 80, "nhap_hoc": 80, "sat_act": 25, "dgnl": 20, "ielts": 24, "thpt": 24.2}, "nam_2024": {"chi_tieu": 120, "nhap_hoc": 128, "sat": 23.4, "alevel_act": null, "dgnl": 17, "ielts": 23, "thpt": 25.24}},
+        {"stt": 13, "ma_xet_tuyen": "CN4", "ma_nganh": 7520101, "ten_chuong_trinh_dao_tao": "Cơ kỹ thuật", "nam_2023": {"chi_tieu": 80, "nhap_hoc": 68, "sat_act": 25, "dgnl": 21, "ielts": 25, "thpt": 25.65}, "nam_2024": {"chi_tieu": 80, "nhap_hoc": 77, "sat": 23.4, "alevel_act": null, "dgnl": 17, "ielts": 23, "thpt": 26.03}},
+        {"stt": 14, "ma_xet_tuyen": "CN5", "ma_nganh": 7510103, "ten_chuong_trinh_dao_tao": "Công nghệ kỹ thuật xây dựng", "nam_2023": {"chi_tieu": 150, "nhap_hoc": 140, "sat_act": 25, "dgnl": 20, "ielts": 22, "thpt": 23.1}, "nam_2024": {"chi_tieu": 160, "nhap_hoc": 138, "sat": 23.4, "alevel_act": null, "dgnl": 17, "ielts": 23, "thpt": 23.91}},
+        {"stt": 15, "ma_xet_tuyen": "CN6", "ma_nganh": 7510203, "ten_chuong_trinh_dao_tao": "Công nghệ kỹ thuật cơ – điện tử", "nam_2023": {"chi_tieu": 150, "nhap_hoc": 166, "sat_act": 25, "dgnl": 21.5, "ielts": 25, "thpt": 25}, "nam_2024": {"chi_tieu": 160, "nhap_hoc": 163, "sat": 23.4, "alevel_act": null, "dgnl": 20, "ielts": 24, "thpt": 26.27}},
+        {"stt": 16, "ma_xet_tuyen": "CN7", "ma_nganh": 7519001, "ten_chuong_trinh_dao_tao": "Công nghệ hàng không vũ trụ", "nam_2023": {"chi_tieu": 90, "nhap_hoc": 79, "sat_act": 26, "dgnl": 21, "ielts": 25, "thpt": 24.1}, "nam_2024": {"chi_tieu": 120, "nhap_hoc": 121, "sat": 23.4, "alevel_act": null, "dgnl": 17, "ielts": 23, "thpt": 24.61}},
+        {"stt": 17, "ma_xet_tuyen": "CN8", "ma_nganh": 7480101, "ten_chuong_trinh_dao_tao": "Khoa học Máy tính", "nam_2023": {"chi_tieu": 280, "nhap_hoc": 290, "sat_act": 27, "dgnl": 24, "ielts": 27.25, "thpt": 27.25}, "nam_2024": {"chi_tieu": 320, "nhap_hoc": 323, "sat": 27.15, "alevel_act": 26.5, "dgnl": 22, "ielts": 27, "thpt": 27.58}},
+        {"stt": 18, "ma_xet_tuyen": "CN9", "ma_nganh": 7510302, "ten_chuong_trinh_dao_tao": "Công nghệ kỹ thuật điện tử – viễn thông", "nam_2023": {"chi_tieu": 150, "nhap_hoc": 178, "sat_act": 26, "dgnl": 22.5, "ielts": 25.5, "thpt": 25.15}, "nam_2024": {"chi_tieu": 320, "nhap_hoc": 329, "sat": 24, "alevel_act": null, "dgnl": 20, "ielts": 25, "thpt": 26.3}},
+        {"stt": 19, "ma_xet_tuyen": "CN19", "ma_nganh": 7510402, "ten_chuong_trinh_dao_tao": "Công nghệ vật liệu và Vi điện tử", "nam_2023": {"chi_tieu": null, "nhap_hoc": null, "sat_act": null, "dgnl": null, "ielts": null, "thpt": null}, "nam_2024": {"chi_tieu": null, "nhap_hoc": null, "sat": null, "alevel_act": null, "dgnl": null, "ielts": null, "thpt": null}},
+        {"stt": 20, "ma_xet_tuyen": "CN20", "ma_nganh": 7460108, "ten_chuong_trinh_dao_tao": "Khoa học và Kỹ thuật dữ liệu", "nam_2023": {"chi_tieu": null, "nhap_hoc": null, "sat_act": null, "dgnl": null, "ielts": null, "thpt": null}, "nam_2024": {"chi_tieu": null, "nhap_hoc": null, "sat": null, "alevel_act": null, "dgnl": null, "ielts": null, "thpt": null}},
+        {"stt": 21, "ma_xet_tuyen": "CN21", "ma_nganh": 7420201, "ten_chuong_trinh_dao_tao": "Công nghệ kỹ thuật sinh học", "nam_2023": {"chi_tieu": null, "nhap_hoc": null, "sat_act": null, "dgnl": null, "ielts": null, "thpt": null}, "nam_2024": {"chi_tieu": null, "nhap_hoc": null, "sat": null, "alevel_act": null, "dgnl": null, "ielts": null, "thpt": null}},
+        {"stt": 22, "ma_xet_tuyen": "CN9", "ma_nganh": 7510302, "ten_chuong_trinh_dao_tao": "Công nghệ kỹ thuật điện tử - viễn thông định hướng Thiết kế vi mạch", "nam_2023": {"chi_tieu": null, "nhap_hoc": null, "sat_act": null, "dgnl": null, "ielts": null, "thpt": null}, "nam_2024": {"chi_tieu": null, "nhap_hoc": null, "sat": null, "alevel_act": null, "dgnl": null, "ielts": null, "thpt": null}}
+      ]
+    }
+  }
+}
