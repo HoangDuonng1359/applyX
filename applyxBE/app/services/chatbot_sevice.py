@@ -10,7 +10,6 @@ from langchain.chains import create_history_aware_retriever, create_retrieval_ch
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import HumanMessage, AIMessage
-
 from pathlib import Path
 
 APP_DIR = Path(__file__).resolve().parents[1]   # .../applyxBE/app
@@ -28,7 +27,7 @@ class ChatService:
         # --- 1. Lấy API Key và kiểm tra ---
         self.api_key = os.getenv("GEMINI_API_KEY")
         if not self.api_key:
-            raise ValueError("GOOGLE_API_KEY không được tìm thấy. Vui lòng kiểm tra file .env.")
+            raise ValueError("GEMINI_API_KEY không được tìm thấy. Vui lòng kiểm tra file .env.")
 
         # --- 2. Đường dẫn và kiểm tra Vector Store ---
         self.vectorstore_path = VECTORSTORE_PATH
@@ -37,7 +36,7 @@ class ChatService:
                                     "Vui lòng chạy script để tạo index trước.")
 
         # --- 3. Khởi tạo các mô hình của Google ---
-        self.llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=self.api_key, temperature=0.3)
+        self.llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro", google_api_key=self.api_key, temperature=0.3)
         self.embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=self.api_key)
 
         # --- 4. Tải Vector Store ---
@@ -83,11 +82,10 @@ class ChatService:
         # Prompt cuối cùng để Gemini trả lời câu hỏi DỰA TRÊN context (lấy từ PDF)
         qa_system_prompt = """
             Bạn là một trợ lý tư vấn tuyển sinh chuyên nghiệp và thân thiện của trường đại học.
-            Hãy trả lời câu hỏi của người dùng một cách chi tiết và chính xác nhất có thể,
-            chỉ dựa vào nội dung được cung cấp dưới đây.
-            Nếu thông tin không có trong nội dung, hãy lịch sự nói rằng "Tôi không tìm thấy thông tin này trong tài liệu được cung cấp."
-            Tuyệt đối không được bịa đặt thông tin. Luôn trả lời bằng tiếng Việt.
-
+            Hãy trả lời câu hỏi của người dùng một cách chi tiết và chính xác nhất có thể.
+            Bạn CHỈ được trả lời dựa vào Context. Nếu Context không có thông tin, TRẢ LỜI NGAY:
+            "Tôi không tìm thấy thông tin này trong tài liệu được cung cấp."
+            Không được sử dụng kiến thức nền hoặc suy đoán.
             Context:
             {context}
             """
@@ -100,7 +98,13 @@ class ChatService:
         )
         
         # Chain này nhận context và câu hỏi để tạo câu trả lời
-        question_answer_chain = create_stuff_documents_chain(self.llm, qa_prompt)
+        document_prompt = ChatPromptTemplate.from_template(
+            "Nguồn: {source} | Trang: {page}\n{page_content}"
+        )
+
+        question_answer_chain = create_stuff_documents_chain(
+            self.llm, qa_prompt, document_prompt=document_prompt
+        )
 
         # Kết hợp tất cả lại thành RAG chain cuối cùng
         rag_chain = create_retrieval_chain(history_aware_retriever, question_answer_chain)
@@ -121,6 +125,7 @@ class ChatService:
         chat_history = self.sessions[session_id]["chat_history"]
 
         # Gọi RAG chain để xử lý
+        
         response = self.conversational_rag_chain.invoke({
             "chat_history": chat_history,
             "input": message
