@@ -1,42 +1,42 @@
-session_id: session_1755393325
+session_id: session_1755406257
 result: ```json
 {
   "careers": [
     {
       "rank": 1,
-      "title": "Nghệ sĩ Truyền thông Xã hội & Tác động",
-      "subtitle": "Kết hợp nghệ thuật và truyền thông để lan tỏa thông điệp tích cực",
-      "averageScore": 92,
-      "worldNeedsScore": 95,
+      "title": "Chuyên viên Thiết kế UI/UX (trong lĩnh vực Giáo dục)",
+      "subtitle": "Kết hợp khả năng sáng tạo nghệ thuật và phân tích để tối ưu trải nghiệm người dùng trong các ứng dụng giáo dục.",
+      "averageScore": 90,
+      "worldNeedsScore": 90,
       "paidScore": 85,
       "loveScore": 95,
       "goodAtScore": 90,
-      "color": "#FF7043",
-      "explanation": "Bạn có niềm đam mê sâu sắc với nghệ thuật, đặc biệt là vẽ và thiết kế, để tạo ra những tác phẩm truyền cảm hứng và thông điệp ý nghĩa (ví dụ về bình đẳng giới, con người, môi trường). Với khả năng giao tiếp, thuyết phục và sử dụng đa ngôn ngữ, bạn rất giỏi trong việc quảng bá các thông điệp này trên các nền tảng mạng xã hội, tiếp cận khán giả rộng lớn. Xã hội đang rất cần những tiếng nói sáng tạo để lan tỏa tri thức, nâng cao nhận thức về các vấn đề xã hội, và đây chính là sứ mệnh bạn muốn theo đuổi. Tiềm năng kiếm sống đến từ việc bán tác phẩm, nhận dự án thiết kế cho các chiến dịch xã hội, hoặc xây dựng thương hiệu cá nhân có ảnh hưởng trong lĩnh vực nghệ thuật vì cộng đồng."
+      "color": "#FFB800",
+      "explanation": "Bạn thể hiện niềm đam mê mạnh mẽ với 'sáng tạo nghệ thuật (vẽ, viết, thiết kế)' và mong muốn trực tiếp 'tối ưu trải nghiệm người dùng' đặc biệt là trong 'ứng dụng giáo dục'. Đây là những yếu tố cốt lõi của một UI/UX Designer. Bạn rất giỏi trong 'phân tích và xử lý dữ liệu', 'phân tích nguyên nhân cặn kẽ' và 'phân tích nhu cầu' thông qua khảo sát, phỏng vấn, những kỹ năng cực kỳ quan trọng để hiểu người dùng. Khả năng về 'thiết kế đồ họa' cũng là một điểm cộng lớn. Nhu cầu về các sản phẩm công nghệ hữu ích, đặc biệt trong giáo dục và trải nghiệm người dùng tốt là rất lớn, đồng thời đây cũng là một lĩnh vực có mức thu nhập cạnh tranh trong ngành CNTT và AI."
     },
     {
       "rank": 2,
-      "title": "Nhà Thiết Kế Đồ Họa cho Chiến Dịch Xã Hội",
-      "subtitle": "Chuyên gia sáng tạo hình ảnh cho các dự án và tổ chức cộng đồng",
-      "averageScore": 88,
-      "worldNeedsScore": 90,
-      "paidScore": 80,
-      "loveScore": 90,
-      "goodAtScore": 85,
-      "color": "#4CAF50",
-      "explanation": "Bạn có khả năng sáng tạo và kỹ năng thiết kế ấn phẩm xuất sắc, đặc biệt là với mong muốn tạo ra poster và tài liệu trực quan cho các hội thảo. Đây là một điểm mạnh lớn để bạn đóng góp vào việc truyền bá tri thức và các thông điệp quan trọng về bình đẳng giới, môi trường đến cộng đồng. Nhu cầu xã hội về các chuyên gia thiết kế có thể chuyển tải thông tin phức tạp thành hình ảnh dễ hiểu đang ngày càng tăng. Bạn có thể kiếm sống bằng cách làm việc cho các tổ chức phi lợi nhuận, các chiến dịch xã hội, hoặc nhận các dự án thiết kế độc lập."
+      "title": "Quản lý Sản phẩm (Product Manager) Công nghệ Giáo dục",
+      "subtitle": "Dẫn dắt quá trình phát triển sản phẩm công nghệ giáo dục, từ ý tưởng đến triển khai, đảm bảo đáp ứng nhu cầu thị trường.",
+      "averageScore": 91,
+      "worldNeedsScore": 95,
+      "paidScore": 90,
+      "loveScore": 88,
+      "goodAtScore": 92,
+      "color": "#007bff",
+      "explanation": "Với khả năng 'nghiên cứu một lĩnh vực chuyên sâu' và 'phân tích nguyên nhân cặn kẽ', bạn có tố chất của một người quản lý sản phẩm. Bạn muốn 'tạo ra sản phẩm hữu ích' và 'ứng dụng giáo dục', đồng thời quan tâm đến 'công nghệ và đổi mới'. Các kỹ năng 'phân tích và xử lý dữ liệu', 'phân tích nhu cầu' (khảo sát, phỏng vấn) là nền tảng vững chắc để xác định tầm nhìn và lộ trình sản phẩm. Vai trò này đòi hỏi sự hiểu biết sâu sắc về thị trường và người dùng để đảm bảo sản phẩm đáp ứng đúng nhu cầu xã hội, điều mà bạn thể hiện rõ mong muốn đóng góp, và là một vị trí có mức thu nhập cao trong ngành công nghệ thông tin."
     },
     {
       "rank": 3,
-      "title": "Chuyên gia Phát triển Nội dung Giáo dục Trực tuyến",
-      "subtitle": "Chuyển tải tri thức và thông điệp qua các định dạng nội dung số sáng tạo",
-      "averageScore": 86,
-      "worldNeedsScore": 85,
-      "paidScore": 75,
+      "title": "Kỹ sư Phần mềm Front-end (Phát triển Ứng dụng Giáo dục)",
+      "subtitle": "Chuyển hóa thiết kế và trải nghiệm người dùng thành các ứng dụng giáo dục hoạt động hiệu quả.",
+      "averageScore": 91,
+      "worldNeedsScore": 95,
+      "paidScore": 95,
       "loveScore": 85,
-      "goodAtScore": 85,
-      "color": "#8C52FF",
-      "explanation": "Niềm yêu thích sáng tạo và mong muốn giúp người khác phát triển kỹ năng thông qua giáo dục định hình con đường này cho bạn. Với khả năng giao tiếp và ngoại ngữ, bạn rất phù hợp để phát triển các nội dung giáo dục trực tuyến đa ngôn ngữ, bao gồm cả việc minh họa bằng nghệ thuật để truyền tải tri thức và các thông điệp xã hội. Xã hội ngày càng cần các chuyên gia có thể biến thông tin phức tạp thành nội dung dễ hiểu và thu hút trên các nền tảng số. Bạn có thể kiếm sống bằng cách tạo và bán các khóa học, hợp tác với các tổ chức giáo dục, hoặc làm việc như một nhà phát triển nội dung tự do."
+      "goodAtScore": 90,
+      "color": "#28a745",
+      "explanation": "Bạn đã lựa chọn 'lập trình và công nghệ' là kỹ năng muốn phát triển và quan tâm đến 'phát triển phần mềm', đặc biệt là 'tạo ra những ứng dụng hữu ích' trong lĩnh vực 'giáo dục'. Khả năng 'tối ưu trải nghiệm người dùng' và có hứng thú với 'thiết kế đồ họa' sẽ giúp bạn trở thành một kỹ sư Front-end xuất sắc, người trực tiếp xây dựng giao diện và trải nghiệm người dùng. Nhu cầu về lập trình viên trong 'công nghệ thông tin và AI' là cực kỳ cao, đảm bảo cơ hội việc làm và thu nhập rất tốt. Đây là con đường giúp bạn biến ý tưởng sáng tạo và khả năng phân tích thành sản phẩm thực tế."
     }
   ]
 }
