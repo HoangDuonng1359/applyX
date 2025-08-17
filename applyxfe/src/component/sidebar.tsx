@@ -18,44 +18,40 @@ const Sidebar = () => {
             <div className="space-y-2">
                 <div className="text-sm text-gray-500 mb-4">Hành trình của bạn</div>
                 <div
-                    className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer ${
-                        location.pathname === "/" || location.pathname === "/ikigai-career"
-                            ? "bg-blue-50 text-blue-600"
-                            : "text-gray-600 hover:bg-gray-50"
-                    }`}
+                    className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer ${location.pathname === "/" || location.pathname === "/ikigai-career"
+                        ? "bg-blue-50 text-blue-600"
+                        : "text-gray-600 hover:bg-gray-50"
+                        }`}
                     onClick={() => navigate("/ikigai-career")}
                 >
                     <div className="w-5 h-5 flex items-center justify-center">🚀</div>
                     <span>Định hướng bản thân</span>
                 </div>
                 <div
-                    className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer ${
-                        location.pathname.startsWith("/ikigai-result")
-                            ? "bg-blue-50 text-blue-600"
-                            : "text-gray-600 hover:bg-gray-50"
-                    }`}
+                    className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer ${location.pathname.startsWith("/ikigai-result")
+                        ? "bg-blue-50 text-blue-600"
+                        : "text-gray-600 hover:bg-gray-50"
+                        }`}
                     onClick={() => navigate("/ikigai-result/demo")}
                 >
                     <div className="w-5 h-5 flex items-center justify-center">📊</div>
                     <span>Kết quả phân tích</span>
                 </div>
                 <div
-                    className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer ${
-                        location.pathname === "/chatbox"
-                            ? "bg-blue-50 text-blue-600"
-                            : "text-gray-600 hover:bg-gray-50"
-                    }`}
-                    onClick={() => navigate("/chatbox")}
+                    className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer ${location.pathname === "/chatbot"
+                        ? "bg-blue-50 text-blue-600"
+                        : "text-gray-600 hover:bg-gray-50"
+                        }`}
+                    onClick={() => navigate("/chatbot")}
                 >
                     <div className="w-5 h-5 flex items-center justify-center">💬</div>
-                    <span>Chatbox AI</span>
+                    <span>Chatbot AI</span>
                 </div>
                 <div
-                    className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer ${
-                        location.pathname === "/profile"
-                            ? "bg-blue-50 text-blue-600"
-                            : "text-gray-600 hover:bg-gray-50"
-                    }`}
+                    className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer ${location.pathname === "/profile"
+                        ? "bg-blue-50 text-blue-600"
+                        : "text-gray-600 hover:bg-gray-50"
+                        }`}
                     onClick={() => navigate("/profile")}
                 >
                     <div className="w-5 h-5 flex items-center justify-center">📁</div>
