@@ -546,7 +546,7 @@ const ProfileForm: React.FC = () => {
                                     <div>
                                         <div className="font-medium text-gray-900 mb-1">Chia sẻ profile của bạn</div>
                                         <div className="text-sm text-gray-600">
-                                            AI sẽ vận hành sinh sẽ thúy cắp profile của bạn. Có thể thậy đổi tình năng này bất cứ lúc nào.
+                                            AI sẽ truy cập vào profile của bạn. Có thể thay đổi tính năng này bất cứ lúc nào.
                                         </div>
                                     </div>
                                 </div>
