@@ -62,7 +62,7 @@ class ApplyXChatbot:
                 "role": "user",
                 "parts": [
                     "Bây giờ bạn hãy tạo ra một cuộc hội thoại kiểu như một bài khảo sát định hướng nghề nghiệp dựa trên nguyên lý Ikigai. "
-                    "Bạn sẽ hỏi lần lượt 20 câu hỏi, bao gồm 8 câu hỏi cơ bản sau đây và 10 câu hỏi bổ sung dựa trên câu trả lời của tôi để tạo ra những câu hỏi sâu hơn, cá nhân hóa hơn.\n\n"
+                    "Bạn sẽ hỏi lần lượt 18 câu hỏi, bao gồm 8 câu hỏi cơ bản sau đây và 10 câu hỏi bổ sung dựa trên câu trả lời của tôi để tạo ra những câu hỏi sâu hơn, cá nhân hóa hơn.\n\n"
                     
                     "**18 câu hỏi - PHẢI HỎI CHÍNH XÁC THEO CẤU TRÚC NÀY:**\n\n"
                     
@@ -126,8 +126,8 @@ class ApplyXChatbot:
                     "- QUAN TRỌNG: Phải hỏi chính xác theo đúng cấu trúc trên, không được thay đổi nội dung câu hỏi hoặc các lựa chọn a, b, c, d, e với các câu hỏi cơ bản, không thêm giải thích hoặc ký tự thừa\n"
                     "- Hỏi từng câu một, đợi tôi trả lời trước khi chuyển sang câu tiếp theo\n"
                     "- Sau 8 câu cơ bản, tạo thêm 10 câu hỏi cá nhân hóa dựa trên câu trả lời của tôi\n"
-                    "- Các câu hỏi bạn tạo ra hãy tuân thủ quy tắc hiển thị sau:"
-                    "- Option 9: câu hỏi bạn tạo ra..."
+                    "- Các câu hỏi bạn tạo ra hãy tuân thủ quy tắc hiển thị sau:\n"
+                    "- Option 9: câu hỏi bạn tạo ra...\n"
                     "- Các câu hỏi bổ sung phải bám sát vào người trả lời để hiểu rõ hơn về đam mê, khả năng, giá trị và nhu cầu thị trường của họ\n"
                     "- Khi tôi trả lời xong 18 câu hỏi, hãy trả về kết quả theo đúng cấu trúc JSON sau (chỉ trả về JSON, không thêm giải thích hoặc ký tự thừa):\n"
                     "{"
@@ -147,8 +147,9 @@ class ApplyXChatbot:
                         "..."
                     "]"
                     "}"
-                "- Mỗi nghề nghiệp là một object trong mảng \"careers\". Các trường số là số nguyên, color là mã màu hex, explanation là chuỗi."
-                "- Chỉ trả về đúng cấu trúc JSON trên, không thêm bất kỳ văn bản nào khác."
+                    "- Mỗi nghề nghiệp là một object trong mảng \"careers\". Các trường số là số nguyên, color là mã màu hex, explanation là chuỗi.\n"
+                    "- BẮT BUỘC: Trong mảng \"careers\" phải có ít nhất 3 nghề nghiệp khác nhau.\n"
+                    "- Chỉ trả về đúng cấu trúc JSON trên, không thêm bất kỳ văn bản nào khác."
                 ]
             },
             {
@@ -158,14 +159,15 @@ class ApplyXChatbot:
                     "Tôi sẽ thực hiện chính xác 18 câu hỏi tổng cộng\n"
                     "Cụ thể, sẽ có 8 câu hỏi cơ bản và tiếp theo là 10 câu hỏi bổ sung\n"
                     "Tất cả các câu hỏi sẽ được hỏi theo ĐÚNG CẤU TRÚC bạn đã cung cấp, không thay đổi gì, không thêm giải thích, nhận xét, chào hỏi hoặc ký tự thừa\n"
-                    "8 câu hỏi đầu phải có chữ \"Câu thứ tự câu hỏi\" ở đầu ví dụ: Câu 1: ... "
+                    "8 câu hỏi đầu phải có chữ \"Câu thứ tự câu hỏi\" ở đầu ví dụ: Câu 1: ... \n"
                     "10 câu hỏi tiếp theo sẽ được cá nhân hóa dựa trên câu trả lời của bạn, đầu ra đúng theo cấu trúc có chữ \"Option thứ tự câu hỏi\" ở đầu mỗi câu hỏi ví dụ Option 9:... \n"
                     "Hỏi từng câu một và đợi câu trả lời\n"
-                    "Kết thúc bằng danh sách nghề nghiệp phù hợp với giải thích chi tiết theo 4 yếu tố Ikigai\n\n"
+                    "Kết thúc bằng danh sách ít nhất 3 nghề nghiệp phù hợp với giải thích chi tiết theo 4 yếu tố Ikigai\n\n"
                     "Tôi đã sẵn sàng! Khi nào bạn nói \"Bắt đầu khảo sát ikigai\", tôi sẽ bắt đầu với câu hỏi đầu tiên theo đúng format đã được cung cấp."
                 ]
             }
         ]
+
     
     def create_session(self, session_id: str = None) -> str:
         """
