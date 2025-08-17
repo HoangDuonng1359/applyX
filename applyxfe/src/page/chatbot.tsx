@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Sidebar from '../component/sidebar';
-
+import { Mic, MicOff } from 'lucide-react';
 // Types
 interface Message {
     id: string;
@@ -23,6 +23,8 @@ const Chatbot: React.FC = () => {
     const [sessionId, setSessionId] = useState<string | null>(null);
     const [isConnected, setIsConnected] = useState(false);
     const [showWelcome, setShowWelcome] = useState(true);
+    const [isListening, setIsListening] = useState(false);
+    const [recognition, setRecognition] = useState<any>(null);
 
     const chatMessagesRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -59,6 +61,25 @@ const Chatbot: React.FC = () => {
             inputRef.current.focus();
         }
     }, [isConnected]);
+
+    useEffect(() => {
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+            const recog = new SpeechRecognition();
+            recog.lang = 'vi-VN';
+            recog.continuous = false;
+            recog.interimResults = false;
+
+            recog.onresult = (event: any) => {
+                const transcript = event.results[0][0].transcript;
+                setInputValue(prev => prev ? prev + ' ' + transcript : transcript);
+            };
+            recog.onend = () => setIsListening(false);
+            recog.onerror = () => setIsListening(false);
+
+            setRecognition(recog);
+        }
+    }, []);
 
     const createSession = async (): Promise<void> => {
         try {
@@ -155,6 +176,17 @@ const Chatbot: React.FC = () => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
             sendMessage();
+        }
+    };
+
+    const handleMicClick = () => {
+        if (!recognition) return;
+        if (isListening) {
+            recognition.stop();
+            setIsListening(false);
+        } else {
+            recognition.start();
+            setIsListening(true);
         }
     };
 
@@ -367,7 +399,24 @@ const Chatbot: React.FC = () => {
                             >
                                 ➤
                             </button>
+                            <button
+                                onClick={handleMicClick}
+                                className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all text-lg shadow-md ${isListening
+                                    ? 'bg-red-500 text-white shadow-red-500/30'
+                                    : 'bg-blue-500 text-white shadow-blue-500/20'
+                                    }`}
+                                disabled={!isConnected}
+                                title={isListening ? 'Ngừng ghi âm' : 'Bắt đầu ghi âm'}
+                            >
+                                {isListening ? <MicOff className="w-6 h-6" /> : <Mic className="w-6 h-6" />}
+                            </button>
                         </div>
+
+                        {!(window as any).webkitSpeechRecognition && !(window as any).SpeechRecognition && (
+                            <p className="text-sm text-red-500 mt-2">
+                                Trình duyệt của bạn không hỗ trợ Speech Recognition
+                            </p>
+                        )}
                     </div>
                 </div>
             </div>
