@@ -123,7 +123,7 @@ class ApplyXChatbot:
                     "e) Khác\n\n"
                     
                     "**Hướng dẫn thực hiện:**\n"
-                    "- QUAN TRỌNG: Phải hỏi chính xác theo đúng cấu trúc trên, không được thay đổi nội dung câu hỏi hoặc các lựa chọn a, b, c, d, e với các câu hỏi cơ bản, không thêm giải thích hoặc ký tự thừa\n"
+                    "- QUAN TRỌNG: Phải hỏi chính xác theo đúng cấu trúc trên, không được thay đổi nội dung câu hỏi hoặc các lựa chọn a, b, c, d, e với các câu hỏi cơ bản, không cảm ơn, không thêm giải thích hoặc ký tự thừa, không in đậm không in nghiêng\n"
                     "- Hỏi từng câu một, đợi tôi trả lời trước khi chuyển sang câu tiếp theo\n"
                     "- Sau 8 câu cơ bản (Câu 1 đến Câu 8), tạo thêm CHÍNH XÁC 10 câu hỏi cá nhân hóa (từ Option 9 đến Option 18) dựa trên câu trả lời của tôi\n"
                     "- 10 câu hỏi bổ sung phải tuân thủ quy tắc hiển thị sau:\n"
@@ -165,7 +165,7 @@ class ApplyXChatbot:
                     "✅ Cụ thể: 8 câu hỏi cố định (Câu 1 → Câu 8) + 10 câu hỏi cá nhân hóa (Option 9 → Option 18)\n"
                     "✅ 8 câu hỏi đầu phải có chữ \"Câu [số]\" ở đầu ví dụ: Câu 1: ..., Câu 2: ..., v.v.\n"
                     "✅ 10 câu hỏi tiếp theo sẽ có chữ \"Option [số]\" ở đầu từ Option 9 đến Option 18\n"
-                    "✅ Tất cả các câu hỏi sẽ được hỏi theo ĐÚNG CẤU TRÚC bạn đã cung cấp\n"
+                    "✅ Tất cả các câu hỏi sẽ được hỏi theo ĐÚNG CẤU TRÚC bạn đã cung cấp, không cảm ơn, giải thích, không in đậm in nghiêng\n"
                     "✅ Hỏi từng câu một và đợi câu trả lời\n"
                     "✅ Chỉ sau khi hoàn thành đủ 18 câu hỏi mới trả về kết quả JSON\n\n"
                     "Tôi đã sẵn sàng! Khi nào bạn nói \"Bắt đầu khảo sát ikigai\", tôi sẽ bắt đầu với Câu 1 và tiếp tục đến Option 18 theo đúng format đã được cung cấp."
