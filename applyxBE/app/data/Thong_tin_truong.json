@@ -1,0 +1,54 @@
+{
+  "gioi_thieu_truong": {
+    "ten_truong": "Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội",
+    "thong_tin_thanh_lap": {
+      "quyet_dinh_so": "92/2004/QĐ-TTg",
+      "ngay_thanh_lap": "25/05/2004",
+      "co_quan_ban_hanh": "Thủ tướng Chính phủ",
+      "tien_than": [
+        "Khoa Công nghệ",
+        "Trung tâm Hợp tác Đào tạo và Bồi dưỡng Cơ học"
+      ]
+    },
+    "nhiem_vu_ban_dau": [
+      "Đào tạo nguồn nhân lực trình độ đại học, sau đại học và bồi dưỡng nhân tài thuộc lĩnh vực khoa học, công nghệ.",
+      "Nghiên cứu và triển khai ứng dụng khoa học, công nghệ đáp ứng nhu cầu phát triển kinh tế – xã hội."
+    ],
+    "su_mang": {
+      "chinh": "Đào tạo nguồn nhân lực chất lượng cao, trình độ cao và bồi dưỡng nhân tài; nghiên cứu phát triển và ứng dụng các lĩnh vực khoa học công nghệ tiên tiến mũi nhọn trên cơ sở phát huy thế mạnh về Công nghệ thông tin và Truyền thông.",
+      "tien_phong": "Tiên phong tiếp cận chuẩn mực giáo dục đại học khu vực và thế giới, ứng dụng công nghệ thông tin trong quản trị đại học đóng góp tích cực vào sự phát triển nền kinh tế và xã hội tri thức của đất nước.",
+      "muc_tieu_phu_hop": "Phù hợp và thống nhất với chủ trương, giải pháp và các mục tiêu của Chương trình đổi mới toàn diện giáo dục đại học mà Đảng và Nhà nước đang triển khai thực hiện."
+    },
+    "phat_trien_va_thanh_tuu": {
+      "thoi_gian_phat_trien": "Gần 20 năm",
+      "vi_the": "Một trường đại học có vị thế, uy tín trong hệ thống giáo dục đại học của cả nước.",
+      "doi_ngu_giang_vien": {
+        "ty_le_tien_si": "75%",
+        "ty_le_giao_su_va_pho_giao_su": "25%",
+        "cong_bo_quoc_te": "Tăng nhanh hằng năm"
+      },
+      "chat_luong_dao_tao": {
+        "mo_truong": "Chuẩn mực chất lượng cao",
+        "chuong_trinh_dao_tao": "Phát triển, hoàn thiện ở mọi bậc đào tạo theo hướng tiên tiến, hiện đại, cập nhật",
+        "kiem_dinh": "Phần lớn các chương trình đào tạo được kiểm định theo tiêu chuẩn của mạng lưới các trường đại học ASEAN (AUN) và theo tiêu chuẩn của Bộ Giáo dục và Đào tạo."
+      },
+      "hop_tac": {
+        "quoc_te": "Đối tác tin cậy của hơn 50 trường đại học, viện nghiên cứu và tập đoàn công nghiệp lớn trên thế giới.",
+        "trong_nuoc": "Đi đầu và triển khai có hiệu quả hoạt động hợp tác “Trường – Viện – Doanh nghiệp”."
+      }
+    },
+    "thanh_tich_sinh_vien": {
+      "cuoc_thi_tieu_bieu": [
+        "Kỳ thi lập trình sinh viên ACM/ICPC",
+        "PROCON",
+        "Imagine cup"
+      ],
+      "sinh_vien_tot_nghiep": {
+        "danh_gia_xa_hoi": "Được xã hội đón nhận và đánh giá cao",
+        "ty_le_viec_lam": "Cao (sau một năm ra trường)"
+      },
+      "cuu_sinh_vien": "Trưởng thành và có những đóng góp đáng kể cho phát triển khoa học công nghệ, kinh tế xã hội cho đất nước.",
+      "danh_gia_chung": "Là một địa chỉ đào tạo có uy tín, tin cậy, hấp dẫn, thu hút được những sinh viên có chất lượng."
+    }
+  }
+}
