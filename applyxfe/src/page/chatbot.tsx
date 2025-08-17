@@ -29,11 +29,10 @@ const Chatbot: React.FC = () => {
 
     // Suggestions for quick replies
     const suggestions = [
-        'Các ngành học phù hợp với tôi?',
-        'Điểm chuẩn các trường đại học?',
-        'Học phí các trường như thế nào?',
-        'Thời gian đăng ký xét tuyển?',
-        'Tư vấn định hướng nghề nghiệp'
+        'Tôi muốn biết về học bổng, học phí?',
+        'Điểm chuẩn trường ĐH Công Nghệ - VNU?',
+        'Các ngành học của trường ĐH Công Nghệ',
+        'Chỉ tiêu tuyển sinh của trường',
     ];
 
     // Sidebar menu items
@@ -159,9 +158,73 @@ const Chatbot: React.FC = () => {
         }
     };
 
-    // Render markdown-like content (basic implementation)
+    // Render markdown-like content with full formatting support
     const renderContent = (content: string) => {
-        return <div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br>') }} />;
+        let html = content;
+
+        // Headers (###, ##, #)
+        html = html.replace(/^### (.+)$/gm, '<h3 class="text-lg font-bold text-slate-800 mt-4 mb-2">$1</h3>');
+        html = html.replace(/^## (.+)$/gm, '<h2 class="text-xl font-bold text-slate-800 mt-5 mb-3">$1</h2>');
+        html = html.replace(/^# (.+)$/gm, '<h1 class="text-2xl font-bold text-slate-800 mt-6 mb-4">$1</h1>');
+
+        // Bold text (**text**)
+        html = html.replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold text-slate-800">$1</strong>');
+
+        // Italic text (*text*)
+        html = html.replace(/\*([^*]+)\*/g, '<em class="italic text-slate-700">$1</em>');
+
+        // Code blocks (```code```) - handle before line breaks
+        html = html.replace(/```([\s\S]*?)```/g, '<pre class="bg-slate-100 p-3 rounded-lg text-sm font-mono text-slate-800 my-2 overflow-x-auto">$1</pre>');
+
+        // Inline code (`code`)
+        html = html.replace(/`([^`]+)`/g, '<code class="bg-slate-100 px-2 py-1 rounded text-sm font-mono text-slate-800">$1</code>');
+
+        // Bullet points (* item)
+        html = html.replace(/^\* (.+)$/gm, '<li class="ml-4 mb-1 list-disc list-inside text-slate-700">$1</li>');
+
+        // Numbered lists (1. item)
+        html = html.replace(/^(\d+)\. (.+)$/gm, '<li class="ml-4 mb-1 list-decimal list-inside text-slate-700"><span class="font-medium">$2</span></li>');
+
+        // Wrap consecutive list items in ul/ol tags - simplified approach
+        const lines = html.split('\n');
+        let inBulletList = false;
+        let inNumberList = false;
+        const processedLines: string[] = [];
+
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            const isBulletItem = line.includes('list-disc');
+            const isNumberItem = line.includes('list-decimal');
+
+            if (isBulletItem && !inBulletList) {
+                processedLines.push('<ul class="mb-3">');
+                inBulletList = true;
+            } else if (!isBulletItem && inBulletList) {
+                processedLines.push('</ul>');
+                inBulletList = false;
+            }
+
+            if (isNumberItem && !inNumberList) {
+                processedLines.push('<ol class="mb-3">');
+                inNumberList = true;
+            } else if (!isNumberItem && inNumberList) {
+                processedLines.push('</ol>');
+                inNumberList = false;
+            }
+
+            processedLines.push(line);
+        }
+
+        // Close any open lists
+        if (inBulletList) processedLines.push('</ul>');
+        if (inNumberList) processedLines.push('</ol>');
+
+        html = processedLines.join('\n');
+
+        // Line breaks
+        html = html.replace(/\n/g, '<br>');
+
+        return <div dangerouslySetInnerHTML={{ __html: html }} />;
     };
 
     return (
@@ -179,10 +242,20 @@ const Chatbot: React.FC = () => {
                 </div>
 
                 {/* Chat Container */}
-                <div className="flex-1 flex flex-col overflow-hidden">
+                <div className="flex-1 flex flex-col overflow-hidden relative bg-slate-50">
+                    {/* Background Logo */}
+                    <div
+                        className="absolute inset-0 bg-center bg-no-repeat opacity-5 pointer-events-none z-0"
+                        style={{
+                            backgroundImage: 'url(/logodhcn.png)',
+                            backgroundSize: '300px 300px',
+                            backgroundPosition: 'center center'
+                        }}
+                    ></div>
+
                     <div
                         ref={chatMessagesRef}
-                        className="flex-1 p-8 overflow-y-auto flex flex-col gap-6 bg-slate-50 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-transparent hover:scrollbar-thumb-slate-400"
+                        className="flex-1 p-8 overflow-y-auto flex flex-col gap-6 bg-transparent scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-transparent hover:scrollbar-thumb-slate-400 relative z-10"
                     >
                         {/* Welcome Message */}
                         {showWelcome && (

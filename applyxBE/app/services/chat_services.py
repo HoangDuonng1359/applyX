@@ -25,18 +25,12 @@ class ChatService:
         """
             Lưu kết quả vào session
         """
-        if session_id not in self.bot.sessions:
-            raise ValueError(f"Session {session_id} không tồn tại")
-        
         # Lưu kết quả vào session
         self.bot.saveResultsBySession(session_id, result)
     def get_results_by_session(self, session_id: str):
         """
             Lấy kết quả đã lưu từ session
         """
-        if session_id not in self.bot.sessions:
-            raise ValueError(f"Session {session_id} không tồn tại")
-        
         # Trả về kết quả đã lưu
         return self.bot.getResultsBySession(session_id)
 
