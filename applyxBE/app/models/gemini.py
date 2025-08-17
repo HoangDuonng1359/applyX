@@ -62,9 +62,9 @@ class ApplyXChatbot:
                 "role": "user",
                 "parts": [
                     "Bây giờ bạn hãy tạo ra một cuộc hội thoại kiểu như một bài khảo sát định hướng nghề nghiệp dựa trên nguyên lý Ikigai. "
-                    "Bạn sẽ hỏi lần lượt 20 câu hỏi, bao gồm 8 câu hỏi cơ bản sau đây và 12 câu hỏi bổ sung dựa trên câu trả lời của tôi để tạo ra những câu hỏi sâu hơn, cá nhân hóa hơn.\n\n"
+                    "Bạn sẽ hỏi lần lượt 20 câu hỏi, bao gồm 8 câu hỏi cơ bản sau đây và 10 câu hỏi bổ sung dựa trên câu trả lời của tôi để tạo ra những câu hỏi sâu hơn, cá nhân hóa hơn.\n\n"
                     
-                    "**20 câu hỏi - PHẢI HỎI CHÍNH XÁC THEO CẤU TRÚC NÀY:**\n\n"
+                    "**18 câu hỏi - PHẢI HỎI CHÍNH XÁC THEO CẤU TRÚC NÀY:**\n\n"
                     
                     "**Câu 1:** Hoạt động nào khiến bạn thấy hứng thú và muốn làm hàng ngày?\n"
                     "a) Sáng tạo nghệ thuật (vẽ, viết, thiết kế)\n"
@@ -123,26 +123,45 @@ class ApplyXChatbot:
                     "e) Khác\n\n"
                     
                     "**Hướng dẫn thực hiện:**\n"
-                    "- QUAN TRỌNG: Phải hỏi chính xác theo đúng cấu trúc trên, không được thay đổi nội dung câu hỏi hoặc các lựa chọn a, b, c, d, e với các câu hỏi cơ bản\n"
+                    "- QUAN TRỌNG: Phải hỏi chính xác theo đúng cấu trúc trên, không được thay đổi nội dung câu hỏi hoặc các lựa chọn a, b, c, d, e với các câu hỏi cơ bản, không thêm giải thích hoặc ký tự thừa\n"
                     "- Hỏi từng câu một, đợi tôi trả lời trước khi chuyển sang câu tiếp theo\n"
-                    "- Sau 8 câu cơ bản, tạo thêm 12 câu hỏi cá nhân hóa dựa trên câu trả lời của tôi\n"
-                    "- Các câu hỏi bạn tạo ra hãy thêm chữ Option trước câu hỏi"
+                    "- Sau 8 câu cơ bản, tạo thêm 10 câu hỏi cá nhân hóa dựa trên câu trả lời của tôi\n"
+                    "- Các câu hỏi bạn tạo ra hãy tuân thủ quy tắc hiển thị sau:"
+                    "- Option 9: câu hỏi bạn tạo ra..."
                     "- Các câu hỏi bổ sung phải bám sát vào người trả lời để hiểu rõ hơn về đam mê, khả năng, giá trị và nhu cầu thị trường của họ\n"
-                    "- Kết thúc bằng danh sách nghề nghiệp phù hợp với giải thích chi tiết dựa trên 4 yếu tố Ikigai\n\n"
-                    "- danh sách nghề nghiệp có output tuân thủ output sau:"
-                    "Kết quả: 1, Nghề.... Điểm trung bình: 95 , Điểm thế giới cần: 90, Điểm được trả lương: 60, Điểm yêu thích: 90, Điểm bạn giỏi: 80 \n 2, Nghề....; các đầu điểm bạn hãy tự tính, và tính điểm trung bình" 
-                    "Khi tôi nói \"Bắt đầu khảo sát ikigai\" thì bạn hãy bắt đầu hỏi câu hỏi đầu tiên theo đúng cấu trúc đã cho."
+                    "- Khi tôi trả lời xong 18 câu hỏi, hãy trả về kết quả theo đúng cấu trúc JSON sau (chỉ trả về JSON, không thêm giải thích hoặc ký tự thừa):\n"
+                    "{"
+                    "\"careers\": ["
+                        "{"
+                        "\"rank\": 1,"
+                        "\"title\": \"Tên nghề nghiệp\","
+                        "\"subtitle\": \"Mô tả ngắn\","
+                        "\"averageScore\": 95,"
+                        "\"worldNeedsScore\": 90,"
+                        "\"paidScore\": 60,"
+                        "\"loveScore\": 90,"
+                        "\"goodAtScore\": 80,"
+                        "\"color\": \"#FFB800\","
+                        "\"explanation\": \"Giải thích chi tiết về nghề này dựa trên 4 yếu tố Ikigai\""
+                        "},"
+                        "..."
+                    "]"
+                    "}"
+                "- Mỗi nghề nghiệp là một object trong mảng \"careers\". Các trường số là số nguyên, color là mã màu hex, explanation là chuỗi."
+                "- Chỉ trả về đúng cấu trúc JSON trên, không thêm bất kỳ văn bản nào khác."
                 ]
             },
             {
                 "role": "model",
                 "parts": [
                     "Đã hiểu rõ! Tôi đã ghi nhận đầy đủ yêu cầu của bạn về cuộc khảo sát Ikigai:\n\n"
-                    "✅ Tôi sẽ thực hiện chính xác 20 câu hỏi tổng cộng\n"
-                    "✅ Tất cả các câu hỏi sẽ được hỏi theo ĐÚNG CẤU TRÚC bạn đã cung cấp, không thay đổi gì\n"
-                    "✅ 12 câu hỏi tiếp theo sẽ được cá nhân hóa dựa trên câu trả lời của bạn\n"
-                    "✅ Hỏi từng câu một và đợi câu trả lời\n"
-                    "✅ Kết thúc bằng danh sách nghề nghiệp phù hợp với giải thích chi tiết theo 4 yếu tố Ikigai\n\n"
+                    "Tôi sẽ thực hiện chính xác 18 câu hỏi tổng cộng\n"
+                    "Cụ thể, sẽ có 8 câu hỏi cơ bản và tiếp theo là 10 câu hỏi bổ sung\n"
+                    "Tất cả các câu hỏi sẽ được hỏi theo ĐÚNG CẤU TRÚC bạn đã cung cấp, không thay đổi gì, không thêm giải thích, nhận xét, chào hỏi hoặc ký tự thừa\n"
+                    "8 câu hỏi đầu phải có chữ \"Câu thứ tự câu hỏi\" ở đầu ví dụ: Câu 1: ... "
+                    "10 câu hỏi tiếp theo sẽ được cá nhân hóa dựa trên câu trả lời của bạn, đầu ra đúng theo cấu trúc có chữ \"Option thứ tự câu hỏi\" ở đầu mỗi câu hỏi ví dụ Option 9:... \n"
+                    "Hỏi từng câu một và đợi câu trả lời\n"
+                    "Kết thúc bằng danh sách nghề nghiệp phù hợp với giải thích chi tiết theo 4 yếu tố Ikigai\n\n"
                     "Tôi đã sẵn sàng! Khi nào bạn nói \"Bắt đầu khảo sát ikigai\", tôi sẽ bắt đầu với câu hỏi đầu tiên theo đúng format đã được cung cấp."
                 ]
             }
@@ -329,20 +348,40 @@ class ApplyXChatbot:
     def saveResultsBySession(self, session_id, result: str):
         """
             frontend gửi result về be lưu lại để truy vấn sau này
+            Lưu vào file session/session_data.txt, ghi đè mỗi lần lưu
         """
         if session_id not in self.sessions:
             raise ValueError(f"Session {session_id} không tồn tại")
-        # Lưu kết quả vào session, có thể lưu nhiều kết quả nếu muốn
+        # Lưu kết quả vào session (bộ nhớ)
         self.sessions[session_id]["result"] = result
         logger.info(f"Đã lưu kết quả cho session {session_id}")
+
+        # Đảm bảo thư mục session tồn tại
+        session_dir = os.path.join(os.path.dirname(__file__), "..", "session")
+        session_dir = os.path.abspath(session_dir)
+        os.makedirs(session_dir, exist_ok=True)
+
+        # Ghi đè dữ liệu vào file session_data.txt
+        file_path = os.path.join(session_dir, "session_data.txt")
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(f"session_id: {session_id}\n")
+            f.write(f"result: {result}\n")
+        logger.info(f"Đã ghi kết quả vào file {file_path}")
     def getResultsBySession(self, session_id):
         """
-            gửi result đã lưu về cho frontend
+        Đọc dữ liệu đã lưu từ file session/session_data.txt
+        Returns:
+            str: Nội dung file (hoặc None nếu file không tồn tại)
         """
-        if session_id not in self.sessions:
-            raise ValueError(f"Session {session_id} không tồn tại")
-        # Trả về kết quả đã lưu
-        return self.sessions[session_id].get("result", None)
+        session_dir = os.path.join(os.path.dirname(__file__), "..", "session")
+        session_dir = os.path.abspath(session_dir)
+        file_path = os.path.join(session_dir, "session_data.txt")
+        if not os.path.exists(file_path):
+            logger.warning(f"File {file_path} không tồn tại")
+            return None
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = f.read()
+        return data
 def create_applyx_bot(api_key: str = None) -> ApplyXChatbot:
     """
     Tạo instance ApplyX Chatbot

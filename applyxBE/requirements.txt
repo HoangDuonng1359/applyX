@@ -2,11 +2,8 @@ fastapi
 uvicorn
 python-dotenv
 pydantic
-# Nếu dùng Google Gemini SDK:
 google-generativeai
-# Nếu dùng các thư viện xử lý AI khác:
 langchain_google_genai
 langchain_community
 faiss-cpu == 1.12.0
-# Nếu dùng cho logging hoặc các tiện ích khác:
 colorama
