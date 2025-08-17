@@ -1,0 +1,43 @@
+session_id: session_1755393325
+result: ```json
+{
+  "careers": [
+    {
+      "rank": 1,
+      "title": "Nghệ sĩ Truyền thông Xã hội & Tác động",
+      "subtitle": "Kết hợp nghệ thuật và truyền thông để lan tỏa thông điệp tích cực",
+      "averageScore": 92,
+      "worldNeedsScore": 95,
+      "paidScore": 85,
+      "loveScore": 95,
+      "goodAtScore": 90,
+      "color": "#FF7043",
+      "explanation": "Bạn có niềm đam mê sâu sắc với nghệ thuật, đặc biệt là vẽ và thiết kế, để tạo ra những tác phẩm truyền cảm hứng và thông điệp ý nghĩa (ví dụ về bình đẳng giới, con người, môi trường). Với khả năng giao tiếp, thuyết phục và sử dụng đa ngôn ngữ, bạn rất giỏi trong việc quảng bá các thông điệp này trên các nền tảng mạng xã hội, tiếp cận khán giả rộng lớn. Xã hội đang rất cần những tiếng nói sáng tạo để lan tỏa tri thức, nâng cao nhận thức về các vấn đề xã hội, và đây chính là sứ mệnh bạn muốn theo đuổi. Tiềm năng kiếm sống đến từ việc bán tác phẩm, nhận dự án thiết kế cho các chiến dịch xã hội, hoặc xây dựng thương hiệu cá nhân có ảnh hưởng trong lĩnh vực nghệ thuật vì cộng đồng."
+    },
+    {
+      "rank": 2,
+      "title": "Nhà Thiết Kế Đồ Họa cho Chiến Dịch Xã Hội",
+      "subtitle": "Chuyên gia sáng tạo hình ảnh cho các dự án và tổ chức cộng đồng",
+      "averageScore": 88,
+      "worldNeedsScore": 90,
+      "paidScore": 80,
+      "loveScore": 90,
+      "goodAtScore": 85,
+      "color": "#4CAF50",
+      "explanation": "Bạn có khả năng sáng tạo và kỹ năng thiết kế ấn phẩm xuất sắc, đặc biệt là với mong muốn tạo ra poster và tài liệu trực quan cho các hội thảo. Đây là một điểm mạnh lớn để bạn đóng góp vào việc truyền bá tri thức và các thông điệp quan trọng về bình đẳng giới, môi trường đến cộng đồng. Nhu cầu xã hội về các chuyên gia thiết kế có thể chuyển tải thông tin phức tạp thành hình ảnh dễ hiểu đang ngày càng tăng. Bạn có thể kiếm sống bằng cách làm việc cho các tổ chức phi lợi nhuận, các chiến dịch xã hội, hoặc nhận các dự án thiết kế độc lập."
+    },
+    {
+      "rank": 3,
+      "title": "Chuyên gia Phát triển Nội dung Giáo dục Trực tuyến",
+      "subtitle": "Chuyển tải tri thức và thông điệp qua các định dạng nội dung số sáng tạo",
+      "averageScore": 86,
+      "worldNeedsScore": 85,
+      "paidScore": 75,
+      "loveScore": 85,
+      "goodAtScore": 85,
+      "color": "#8C52FF",
+      "explanation": "Niềm yêu thích sáng tạo và mong muốn giúp người khác phát triển kỹ năng thông qua giáo dục định hình con đường này cho bạn. Với khả năng giao tiếp và ngoại ngữ, bạn rất phù hợp để phát triển các nội dung giáo dục trực tuyến đa ngôn ngữ, bao gồm cả việc minh họa bằng nghệ thuật để truyền tải tri thức và các thông điệp xã hội. Xã hội ngày càng cần các chuyên gia có thể biến thông tin phức tạp thành nội dung dễ hiểu và thu hút trên các nền tảng số. Bạn có thể kiếm sống bằng cách tạo và bán các khóa học, hợp tác với các tổ chức giáo dục, hoặc làm việc như một nhà phát triển nội dung tự do."
+    }
+  ]
+}
+```

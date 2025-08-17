@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowLeft, Users, Heart, DollarSign, Globe, Star, TrendingUp, Award } from 'lucide-react';
+import { useParams } from 'react-router-dom';
 
 interface CareerResult {
   rank: number;
@@ -14,19 +15,21 @@ interface CareerResult {
   explanation?: string;
 }
 
+interface APIResponse {
+  careers: CareerResult[];
+}
+
 const IkigaiResults = () => {
-  const [result, setResult] = useState<string>("");
+  const [result, setResult] = useState<APIResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [parsedResults, setParsedResults] = useState<CareerResult[]>([]);
   const [error, setError] = useState<string>("");
 
-  // Get session_id from props or URL params
-  // const { session_id } = useParams(); // Uncomment if using React Router
-  const session_id = "sample_session"; // Replace with actual session_id
+  
+  const {session_id} = useParams(); 
 
-  // Parse API result function
-  const parseIkigaiResult = (resultText: string): CareerResult[] => {
-    const careers: CareerResult[] = [];
+  // Function to parse raw string response from API
+  const parseRawApiResponse = (rawResponse: string): CareerResult[] => {
     const gradientColors = [
       "from-purple-500 to-pink-500",
       "from-blue-500 to-cyan-500", 
@@ -36,56 +39,49 @@ const IkigaiResults = () => {
     ];
 
     try {
-      // Split by career sections - look for pattern "Kết quả: X, Nghề:" or "X, Nghề:"
-      const careerSections = resultText.split(/(?=\*?Kết quả:\s*\d+|(?<!\d)\d+,\s*Nghề:)/).filter(section => section.trim());
+      // Extract JSON from the raw response
+      // Look for JSON content between ```json and ```
+      const jsonMatch = rawResponse.match(/```json\s*\n([\s\S]*?)\n```/);
       
-      careerSections.forEach((section, index) => {
-        // Extract career rank and title
-        const rankMatch = section.match(/(?:Kết quả:\s*|^)(\d+)(?:,\s*Nghề:\s*(.+?)(?:\*|\n|$))/);
-        if (!rankMatch) return;
-
-        const rank = parseInt(rankMatch[1]);
-        let titleLine = rankMatch[2] || '';
-        
-        // Clean up title - remove asterisks and extract subtitle if in parentheses
-        titleLine = titleLine.replace(/\*/g, '').trim();
-        const titleMatch = titleLine.match(/^(.+?)(?:\s*\((.+?)\))?$/);
-        const title = titleMatch ? titleMatch[1].trim() : titleLine;
-        const subtitle = titleMatch && titleMatch[2] ? titleMatch[2].trim() : '';
-
-        // Extract scores using regex patterns
-        const averageScoreMatch = section.match(/Điểm trung bình:\s*([\d.]+)/);
-        const worldNeedsMatch = section.match(/Điểm thế giới cần:\s*(\d+)/);
-        const paidMatch = section.match(/Điểm được trả lương:\s*(\d+)/);
-        const loveMatch = section.match(/Điểm yêu thích:\s*(\d+)/);
-        const goodAtMatch = section.match(/Điểm bạn giỏi:\s*(\d+)/);
-
-        if (averageScoreMatch) {
-          const career: CareerResult = {
-            rank,
-            title,
-            subtitle,
-            averageScore: parseFloat(averageScoreMatch[1]),
-            worldNeedsScore: worldNeedsMatch ? parseInt(worldNeedsMatch[1]) : 0,
-            paidScore: paidMatch ? parseInt(paidMatch[1]) : 0,
-            loveScore: loveMatch ? parseInt(loveMatch[1]) : 0,
-            goodAtScore: goodAtMatch ? parseInt(goodAtMatch[1]) : 0,
-            color: gradientColors[index % gradientColors.length]
-          };
-
-          careers.push(career);
+      if (!jsonMatch) {
+        // Fallback: try to find JSON-like content after "result:"
+        const resultMatch = rawResponse.match(/result:\s*([\s\S]*)/);
+        if (resultMatch) {
+          const jsonContent = resultMatch[1].trim();
+          // Remove markdown code blocks if present
+          const cleanJson = jsonContent.replace(/```json\s*\n?|```/g, '').trim();
+          const parsedData = JSON.parse(cleanJson);
+          
+          if (parsedData.careers) {
+            return parsedData.careers.map((career: any, index: number) => ({
+              ...career,
+              color: gradientColors[index % gradientColors.length]
+            }));
+          }
         }
-      });
+        throw new Error('No JSON content found in response');
+      }
 
-      return careers.sort((a, b) => a.rank - b.rank);
+      const jsonContent = jsonMatch[1];
+      const parsedData = JSON.parse(jsonContent);
+      
+      if (!parsedData.careers) {
+        throw new Error('No careers array found in parsed data');
+      }
+
+      return parsedData.careers.map((career: any, index: number) => ({
+        ...career,
+        color: gradientColors[index % gradientColors.length]
+      }));
     } catch (error) {
-      console.error('Error parsing Ikigai result:', error);
+      console.error('Error parsing raw API response:', error);
+      console.error('Raw response:', rawResponse);
       return [];
     }
   };
 
-  // Fetch data from API
   useEffect(() => {
+    // Real API call - uncomment and modify as needed
     const fetchResult = async () => {
       if (!session_id) {
         setLoading(false);
@@ -93,21 +89,23 @@ const IkigaiResults = () => {
       }
 
       try {
-        const res = await fetch(`http://127.0.0.1:8000/chatbot/getResult/${session_id}`);
+        const res = await fetch(`http://127.0.0.1:8000/chat/getResult/${session_id}`);
         const data = await res.json();
         
         if (res.ok && data.result) {
-          setResult(data.result);
-          const parsedCareers = parseIkigaiResult(data.result);
-          setParsedResults(parsedCareers);
+          // Parse the raw string response
+          const parsedCareers = parseRawApiResponse(data.result);
+          if (parsedCareers.length > 0) {
+            setParsedResults(parsedCareers);
+          } else {
+            setError("Không thể parse dữ liệu từ API");
+          }
         } else {
-          setResult("Không lấy được kết quả: " + (data.detail || "Unknown error"));
           setError("Không lấy được kết quả: " + (data.detail || "Unknown error"));
         }
       } catch (error) {
         console.error('Error fetching results:', error);
         const errorMessage = "Lỗi kết nối server!";
-        setResult(errorMessage);
         setError(errorMessage);
       } finally {
         setLoading(false);
@@ -115,7 +113,8 @@ const IkigaiResults = () => {
     };
 
     fetchResult();
-  }, [session_id]);
+    
+  }, []);
 
   const ScoreBar = ({ score, maxScore = 100, color = "blue" }: { score: number, maxScore?: number, color?: string }) => (
     <div className="flex items-center gap-2">
@@ -212,7 +211,7 @@ const IkigaiResults = () => {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <p className="text-gray-600 mb-4">Không tìm thấy kết quả phù hợp.</p>
-          <p className="text-sm text-gray-500">Dữ liệu trả về: {result.substring(0, 200)}...</p>
+          <p className="text-sm text-gray-500">Vui lòng thử lại hoặc liên hệ hỗ trợ.</p>
         </div>
       </div>
     );
@@ -247,7 +246,7 @@ const IkigaiResults = () => {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-xl shadow-lg p-6">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-bold text-gray-900">Top 3 Nghề nghiệp phù hợp</h2>
+                <h2 className="text-xl font-bold text-gray-900">Top {parsedResults.length} Nghề nghiệp phù hợp</h2>
                 <div className="flex items-center gap-2 text-sm text-gray-500">
                   <Star className="w-4 h-4 text-yellow-500 fill-current" />
                   <span>Độ phù hợp cao nhất</span>
@@ -313,6 +312,14 @@ const IkigaiResults = () => {
                       </div>
                     </div>
 
+                    {/* Explanation */}
+                    {career.explanation && (
+                      <div className="mb-4 p-4 bg-gray-50 rounded-lg">
+                        <h4 className="font-medium text-gray-900 mb-2">Tại sao phù hợp với bạn:</h4>
+                        <p className="text-sm text-gray-700 leading-relaxed">{career.explanation}</p>
+                      </div>
+                    )}
+
                     {/* Action Button */}
                     <div className="flex justify-between items-center">
                       <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
@@ -338,7 +345,7 @@ const IkigaiResults = () => {
                   </button>
                 </div>
                 <p className="text-center text-sm text-gray-500 mt-4">
-                  Những gề xuất này có hữu ích cho bạn không?
+                  Những gợi ý này có hữu ích cho bạn không?
                 </p>
               </div>
             </div>

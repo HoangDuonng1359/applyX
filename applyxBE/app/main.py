@@ -130,18 +130,22 @@ async def delete_session(session_id: str):
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-@app.post("/chatbot/saveResult/{session_id}/{result}", tags=["Save Results"])
-async def save_result_by_session(session_id: str, result: str):
+class SaveResultRequest(BaseModel):
+    session_id: str
+    result: str
+
+@app.post("/chat/saveResult", tags=["Save Results"])
+async def save_result_by_session(request: SaveResultRequest):
     """
         Gọi save_result để lưu kết quả dạng chuỗi vào session.
     """
     try:
-        chat_service.save_result(session_id, result)
-        return {"message": f"Kết quả đã được lưu cho session {session_id}."}
+        chat_service.save_result(request.session_id, request.result)
+        return {"message": f"Kết quả đã được lưu cho session {request.session_id}."}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-@app.get("/chatbot/getResult/{session_id}", tags=["get Results"])
+@app.get("/chat/getResult/{session_id}", tags=["get Results"])
 async def get_result_by_session(session_id: str):
     """
         Lấy kết quả đã lưu từ session.
