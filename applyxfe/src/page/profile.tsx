@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Bell, HelpCircle, Plus, Calendar, Trash2, Download, FileText, X } from 'lucide-react';
+import Sidebar from '../component/sidebar';
 
 const ProfileForm: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -42,34 +43,7 @@ const ProfileForm: React.FC = () => {
     return (
         <div className="flex h-screen bg-gray-50">
             {/* Sidebar */}
-            <div className="w-64 bg-white border-r border-gray-200 p-4">
-                <div className="flex items-center mb-8">
-                    <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold mr-3">
-                        A
-                    </div>
-                    <span className="font-semibold text-gray-900">ApplyX</span>
-                </div>
-
-                <nav className="space-y-2">
-                    <div className="text-gray-500 text-sm mb-4">Hành trình của bạn</div>
-                    <a href="#" className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">
-                        <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
-                        Định hướng bản thân
-                    </a>
-                    <a href="#" className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">
-                        <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
-                        Kết quả phân tích
-                    </a>
-                    <a href="#" className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md">
-                        <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
-                        Chatbox AI
-                    </a>
-                    <a href="#" className="flex items-center px-3 py-2 text-blue-600 bg-blue-50 rounded-md">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                        Hồ sơ & Tài liệu
-                    </a>
-                </nav>
-            </div>
+            <Sidebar></Sidebar>
 
             {/* Main Content */}
             <div className="flex-1 overflow-auto">
