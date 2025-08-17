@@ -81,6 +81,7 @@ const Ikigai = () => {
     const startJourney = async () => {
         setIsStarted(true);
         const sessionId = await getsessionID();
+
         console.log(sessionId);
         await generateQuestion(sessionId, "Bắt đầu ikigai");
     };
