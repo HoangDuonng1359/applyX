@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import Ikigai from './page/ikigai-career-demo'
 import IkigaiResults from './page/ikigai-results'
+import Profile from './page/profile';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path='/' element={<Ikigai ></Ikigai >}></Route>
         <Route path='/ikigai-career' element={<Ikigai ></Ikigai >}></Route>
         <Route path='/ikigai-result/:session_id' element={<IkigaiResults />}></Route>
+        <Route path='/profile' element={<Profile />}></Route>
       </Routes>
     </BrowserRouter>
   );
