@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowLeft, ArrowRight, Users, Heart, DollarSign, Globe } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Users, Heart, DollarSign, Globe, Mic, MicOff } from 'lucide-react';
 import { count } from 'console';
 import { useNavigate } from "react-router-dom";
 import Sidebar from '../component/sidebar';
@@ -21,6 +21,8 @@ const Ikigai = () => {
     const totalQuestions = 18;
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [data, setData] = useState(null);
+    const [isListening, setIsListening] = useState(false);
+    const [recognition, setRecognition] = useState<any>(null);
     const navigate = useNavigate();
     useEffect(() => {
     document.title = "Định hướng bản thân | ApplyX";
@@ -218,6 +220,61 @@ const Ikigai = () => {
             return;
         }
     };
+
+    const handleMicClick = () => {
+        if (!recognition) return;
+
+        if (isListening) {
+            // Dừng ghi âm
+            setIsListening(false);
+            recognition.stop();
+        } else {
+            // Bắt đầu ghi âm
+            setIsListening(true);
+            recognition.start();
+        }
+    };
+
+    useEffect(() => {
+        if (!recognition) return;
+
+        recognition.onstart = () => {
+            setIsListening(true);
+        };
+
+        recognition.onend = () => {
+            setIsListening(false);
+        };
+
+        recognition.onresult = (event: any) => {
+            const transcript = event.results[0][0].transcript;
+            setAnswer(transcript);
+            recognition.stop();
+        };
+
+        recognition.onerror = (event: any) => {
+            console.error("Speech recognition error:", event.error);
+            setIsListening(false);
+        };
+
+        return () => {
+            recognition.onstart = null;
+            recognition.onend = null;
+            recognition.onresult = null;
+            recognition.onerror = null;
+        };
+    }, [recognition, isListening]);
+
+    useEffect(() => {
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+            const recog = new SpeechRecognition();
+            recog.lang = 'vi-VN';
+            recog.continuous = false;
+            recog.interimResults = false;
+            setRecognition(recog);
+        }
+    }, []);
 
     const progressPercentage = Math.round((questionCount / totalQuestions) * 100);
 
@@ -434,14 +491,28 @@ const Ikigai = () => {
                                     )}
                                 </div>
                             ) : (
-                                <div className="mb-8">
+                                <div className="mb-8 relative">
                                     <textarea
                                         rows={4}
                                         placeholder="Nhập câu trả lời của bạn..."
                                         value={answer}
                                         onChange={(e) => setAnswer(e.target.value)}
-                                        className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none resize-none"
+                                        className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none resize-none pr-12"
                                     />
+                                    <button
+                                        type="button"
+                                        onClick={handleMicClick}
+                                        className={`absolute right-4 top-4 p-2 rounded-full transition-all duration-200
+                                            ${isListening ? 'bg-red-100 text-red-600 hover:bg-red-200' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+                                        title={isListening ? 'Dừng ghi âm' : 'Bắt đầu ghi âm'}
+                                    >
+                                        {isListening ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
+                                    </button>
+                                    {!(window as any).webkitSpeechRecognition && !(window as any).SpeechRecognition && (
+                                        <p className="text-sm text-red-500 mt-2">
+                                            Trình duyệt của bạn không hỗ trợ Speech Recognition
+                                        </p>
+                                    )}
                                 </div>
                             )}
                             <div className="flex items-center justify-end">
