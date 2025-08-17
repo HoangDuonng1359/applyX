@@ -1,0 +1,188 @@
+{
+  "danh_sach_chuong_trinh_dao_tao": [
+    {
+      "stt": 1,
+      "nganh_dao_tao": "Công nghệ thông tin",
+      "chuong_trinh_dao_tao": "Công nghệ thông tin",
+      "van_bang_tot_nghiep": "Cử nhân",
+      "thoi_gian_dao_tao_chuan": "4",
+      "ghi_chu": null
+    },
+    {
+      "stt": 2,
+      "nganh_dao_tao": "Công nghệ thông tin",
+      "chuong_trinh_dao_tao": "Công nghệ thông tin CLC",
+      "van_bang_tot_nghiep": "Cử nhân",
+      "thoi_gian_dao_tao_chuan": "4",
+      "ghi_chu": "Dừng tuyển sinh từ khóa 2022"
+    },
+    {
+      "stt": 3,
+      "nganh_dao_tao": "Công nghệ thông tin",
+      "chuong_trinh_dao_tao": "Công nghệ thông tin định hướng thị trường Nhật Bản",
+      "van_bang_tot_nghiep": "Cử nhân",
+      "thoi_gian_dao_tao_chuan": "4",
+      "ghi_chu": "Dừng tuyển sinh từ khóa 2024"
+    },
+    {
+      "stt": 4,
+      "nganh_dao_tao": "Khoa học máy tính",
+      "chuong_trinh_dao_tao": "Khoa học máy tính",
+      "van_bang_tot_nghiep": "Cử nhân",
+      "thoi_gian_dao_tao_chuan": "4",
+      "ghi_chu": null
+    },
+    {
+      "stt": 5,
+      "nganh_dao_tao": "Hệ thống thông tin",
+      "chuong_trinh_dao_tao": "Hệ thống thông tin",
+      "van_bang_tot_nghiep": "Cử nhân",
+      "thoi_gian_dao_tao_chuan": "4",
+      "ghi_chu": null
+    },
+    {
+      "stt": 6,
+      "nganh_dao_tao": "Mạng máy tính và truyền thông dữ liệu",
+      "chuong_trinh_dao_tao": "Mạng máy tính và truyền thông dữ liệu",
+      "van_bang_tot_nghiep": "Kỹ sư",
+      "thoi_gian_dao_tao_chuan": "4.5",
+      "ghi_chu": null
+    },
+    {
+      "stt": 7,
+      "nganh_dao_tao": "Kỹ thuật máy tính",
+      "chuong_trinh_dao_tao": "Kỹ thuật máy tính",
+      "van_bang_tot_nghiep": "Kỹ sư",
+      "thoi_gian_dao_tao_chuan": "4.5",
+      "ghi_chu": null
+    },
+    {
+      "stt": 8,
+      "nganh_dao_tao": "Kỹ thuật robot",
+      "chuong_trinh_dao_tao": "Kỹ thuật robot",
+      "van_bang_tot_nghiep": "Kỹ sư",
+      "thoi_gian_dao_tao_chuan": "4.5",
+      "ghi_chu": null
+    },
+    {
+      "stt": 9,
+      "nganh_dao_tao": "Công nghệ kỹ thuật điện tử – viễn thông",
+      "chuong_trinh_dao_tao": "Công nghệ kỹ thuật điện tử – viễn thông",
+      "van_bang_tot_nghiep": "Cử nhân",
+      "thoi_gian_dao_tao_chuan": "4",
+      "ghi_chu": null
+    },
+    {
+      "stt": 10,
+      "nganh_dao_tao": "Công nghệ kỹ thuật Điện tử – viễn thông",
+      "chuong_trinh_dao_tao": "Công nghệ kỹ thuật Điện tử – viễn thông định hướng Thiết kế vi mạch",
+      "van_bang_tot_nghiep": "Cử nhân",
+      "thoi_gian_dao_tao_chuan": "4",
+      "ghi_chu": null
+    },
+    {
+      "stt": 11,
+      "nganh_dao_tao": "Vật lý kỹ thuật",
+      "chuong_trinh_dao_tao": "Vật lý kỹ thuật",
+      "van_bang_tot_nghiep": "Cử nhân",
+      "thoi_gian_dao_tao_chuan": "4",
+      "ghi_chu": null
+    },
+    {
+      "stt": 12,
+      "nganh_dao_tao": "Kỹ thuật năng lượng",
+      "chuong_trinh_dao_tao": "Kỹ thuật năng lượng",
+      "van_bang_tot_nghiep": "Kỹ sư",
+      "thoi_gian_dao_tao_chuan": "4.5",
+      "ghi_chu": null
+    },
+    {
+      "stt": 13,
+      "nganh_dao_tao": "Công nghệ vật liệu",
+      "chuong_trinh_dao_tao": "Công nghệ vật liệu và Vi điện tử",
+      "van_bang_tot_nghiep": "Kỹ sư",
+      "thoi_gian_dao_tao_chuan": "4.5",
+      "ghi_chu": null
+    },
+    {
+      "stt": 14,
+      "nganh_dao_tao": "Công nghệ kỹ thuật Cơ điện tử",
+      "chuong_trinh_dao_tao": "Công nghệ kỹ thuật Cơ điện tử",
+      "van_bang_tot_nghiep": "Cử nhân",
+      "thoi_gian_dao_tao_chuan": "4",
+      "ghi_chu": null
+    },
+    {
+      "stt": 15,
+      "nganh_dao_tao": "Kỹ thuật điều khiển và tự động hóa",
+      "chuong_trinh_dao_tao": "Kỹ thuật điều khiển và tự động hóa",
+      "van_bang_tot_nghiep": "Kỹ sư",
+      "thoi_gian_dao_tao_chuan": "4.5",
+      "ghi_chu": null
+    },
+    {
+      "stt": 16,
+      "nganh_dao_tao": "Cơ kỹ thuật",
+      "chuong_trinh_dao_tao": "Cơ kỹ thuật",
+      "van_bang_tot_nghiep": "Kỹ sư",
+      "thoi_gian_dao_tao_chuan": "4.5",
+      "ghi_chu": null
+    },
+    {
+      "stt": 17,
+      "nganh_dao_tao": "Công nghệ hàng không vũ trụ",
+      "chuong_trinh_dao_tao": "Công nghệ hàng không vũ trụ",
+      "van_bang_tot_nghiep": "Kỹ sư",
+      "thoi_gian_dao_tao_chuan": "4.5",
+      "ghi_chu": null
+    },
+    {
+      "stt": 18,
+      "nganh_dao_tao": "Công nghệ kỹ thuật xây dựng",
+      "chuong_trinh_dao_tao": "Công nghệ kỹ thuật xây dựng",
+      "van_bang_tot_nghiep": "Kỹ sư",
+      "thoi_gian_dao_tao_chuan": "4.5",
+      "ghi_chu": null
+    },
+    {
+      "stt": 19,
+      "nganh_dao_tao": "Thiết kế công nghiệp và đồ họa",
+      "chuong_trinh_dao_tao": "Thiết kế công nghiệp và đồ họa",
+      "van_bang_tot_nghiep": "Cử nhân",
+      "thoi_gian_dao_tao_chuan": "4",
+      "ghi_chu": "Ngành đào tạo thí điểm"
+    },
+    {
+      "stt": 20,
+      "nganh_dao_tao": "Công nghệ nông nghiệp",
+      "chuong_trinh_dao_tao": "Công nghệ nông nghiệp",
+      "van_bang_tot_nghiep": "Kỹ sư",
+      "thoi_gian_dao_tao_chuan": "4.5",
+      "ghi_chu": null
+    },
+    {
+      "stt": 21,
+      "nganh_dao_tao": "Công nghệ sinh học",
+      "chuong_trinh_dao_tao": "Công nghệ kỹ thuật sinh học",
+      "van_bang_tot_nghiep": "Kỹ sư",
+      "thoi_gian_dao_tao_chuan": "4.5",
+      "ghi_chu": null
+    },
+    {
+      "stt": 22,
+      "nganh_dao_tao": "Trí tuệ nhân tạo",
+      "chuong_trinh_dao_tao": "Trí tuệ nhân tạo",
+      "van_bang_tot_nghiep": "Cử nhân",
+      "thoi_gian_dao_tao_chuan": "4",
+      "ghi_chu": null
+    },
+    {
+      "stt": 23,
+      "nganh_dao_tao": "Khoa học dữ liệu",
+      "chuong_trinh_dao_tao": "Khoa học và kỹ thuật dữ liệu",
+      "van_bang_tot_nghiep": "Cử nhân",
+      "thoi_gian_dao_tao_chuan": "4",
+      "ghi_chu": null
+    }
+  ]
+}
